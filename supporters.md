@@ -1,5 +1,5 @@
 ---
-description: All these great people have contributed that this page emerges <3
+description: "All these great people are supporters \uD83D\uDC99"
 ---
 
 # Supporters
