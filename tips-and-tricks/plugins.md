@@ -66,7 +66,7 @@ Since Shopware 5.5.3 it's also possible to fetch the right config translation
 
 ## Force loading of plugins in old system
 
-Sometimes you want use Components of Plugins which are writing in old plugin system and the autoloading does not work. This problem occurs cause the plugins are lazy and constructed only if needed. You can force construction with the following code
+Sometimes you want use Components of Plugins which are written in old plugin system and the autoloading does not work. This problem occurs cause the plugins are lazy and constructed only if needed. You can force construction with the following code
 
 ```php
 Shopware()->Plugins()->Namespace()->PluginName()
