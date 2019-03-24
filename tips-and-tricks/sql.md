@@ -9,3 +9,4 @@ UPDATE s_articles SET name = REPLACE(name, "&amp;", "&");
 UPDATE s_articles SET name = REPLACE(name, "&lt;", "<");
 UPDATE s_articles SET name = REPLACE(name, "&gt;", ">");
 ```
+
