@@ -24,3 +24,7 @@ Add following code in your config.php to disable the Template Cache
 ],
 ```
 
+## Redis
+
+When you use Redis for Session **and** Cache, you must use different databases for each. Otherwise, when you delete your Cache, you will also wipe all your sessions!
+
