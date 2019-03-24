@@ -6,3 +6,4 @@
 {s name="NameFromSnippet" assign="tplVariable"}Default Value{/s}
 {$tplVariable|replace:'Test':'Lol'}
 ```
+

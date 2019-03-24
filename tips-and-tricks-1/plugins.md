@@ -1,6 +1,5 @@
 # Plugins
 
-
 ## Add a Smarty Plugin folder with a Plugin
 
 It can be solved with a simple CompilerPass in your Plugin
@@ -80,5 +79,5 @@ With setting a Cache-Control header you can disable for the current request the 
 
 ```php
 $this->Response()->setHeader('Cache-Control', 'private', true);
-
 ```
+

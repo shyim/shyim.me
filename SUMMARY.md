@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Problems and Solutions](problems-and-solutions.md)
-* [Tips & Tricks](tips-and-tricks.md)
 * [Plugin System Features with Version](plugin-system-features-with-version.md)
 * [Supporters](supporters.md)
 
@@ -12,6 +11,8 @@
 * [Smarty](tips-and-tricks-1/smarty.md)
 * [Plugins](tips-and-tricks-1/plugins.md)
 * [Event Cheat-Sheet](tips-and-tricks-1/event-cheat-sheet.md)
+* [Config.php Tweaks](tips-and-tricks-1/tips-and-tricks.md)
+* [SQL](tips-and-tricks-1/sql.md)
 
 ## Problems and Solutions
 

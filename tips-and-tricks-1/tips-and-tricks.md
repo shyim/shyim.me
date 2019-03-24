@@ -1,4 +1,4 @@
-# Tips & Tricks
+# Config.php Tweaks
 
 ## Disable Template Cache
 
