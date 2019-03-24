@@ -11,6 +11,7 @@
 * [Plugins](tips-and-tricks/plugins.md)
 * [Event Cheat-Sheet](tips-and-tricks/event-cheat-sheet.md)
 * [SQL](tips-and-tricks/sql.md)
+* [Config.php Tweaks](tips-and-tricks/config.php-tweaks.md)
 
 ## Problems and Solutions
 
