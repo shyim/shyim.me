@@ -23,3 +23,4 @@ Add following code in your config.php to disable the Template Cache
     'password' => 'mypassword'
 ],
 ```
+

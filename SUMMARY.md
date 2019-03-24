@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Problems and Solutions](problems-and-solutions.md)
 * [Supporters](supporters.md)
 
 ## Tips & Tricks
@@ -15,7 +14,7 @@
 
 ## Problems and Solutions
 
-* [Untitled](problems-and-solutions-1/untitled.md)
+* [General](problems-and-solutions-1/problems-and-solutions.md)
 * [Fixed Bugs](problems-and-solutions-1/fixed-bugs.md)
 
 ## FAQ

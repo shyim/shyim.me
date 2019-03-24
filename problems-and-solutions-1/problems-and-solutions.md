@@ -1,4 +1,4 @@
-# Problems and Solutions
+# General
 
 ## Sending a BCC Mail does not work?
 
