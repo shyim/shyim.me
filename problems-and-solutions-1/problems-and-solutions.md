@@ -23,5 +23,7 @@ Can be only fixed with an Update to Shopware 5.4.0
 
 The Security Plugin "SwagSecurityHotFix201701" drops in newer version all fields. It can be uninstalled and removed from System
 
+## Failed to parse time string \(NULL\) at position 0 in attributes
 
+This issue happens on MariaDB Installations. You should switch to MySQL or update to the newest Shopware version.
 

@@ -81,3 +81,32 @@ With setting a Cache-Control header you can disable for the current request the 
 $this->Response()->setHeader('Cache-Control', 'private', true);
 ```
 
+## Remove theme variables from Json
+
+Remove the template
+
+```php
+$this->View()->setTemplate();
+```
+
+## PHP static store for a config.xml combobox
+
+Create a normal Combobox in config.php. We will set the store values in install method of the plugin
+
+```php
+/** @var Element $element */
+$element = $this->container->get('models')->getRepository(Element::class)->findOneBy([
+    'name' => 'FIELDNAMEFROMCONFIG'
+]);
+
+$element->setOptions([
+    'store' => [
+                    [0, 'No'],
+                    [1, 'Yes']
+                ]
+]);
+
+$this->container->get('models')->persist($element);
+$this->container->get('models')->flush();
+```
+

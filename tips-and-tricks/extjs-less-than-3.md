@@ -1,5 +1,57 @@
 # ExtJS &lt;3
 
+## Open backend modules with link
+
+With /backend?app=**\[NAME\]** can you open any Module \(/backend/?app=Article\), you can also pass supported variables like /backend/?app=\[**NAME**\]&params\[**NAME**\]=**VALUE** \(/backend/?app=Article&params\[articleId\]=1\)
+
+## Create a real checkbox in config.php
+
+```markup
+<element type="boolean">
+    <name>test</name>
+    <label lang="de">test</label>
+    <label lang="en">test</label>
+    <options>
+      <xtype>checkbox</xtype>
+    </options>
+</element>
+```
+
+## Use components from another backend application
+
+When you want to use components from an another application, you have to load first the App. Otherwise the Ext.Loader cannot find the right controller to load the files.
+
+**Example for the Voucher Store**
+
+```javascript
+Ext.require('Shopware.apps.Voucher');
+Ext.create('Shopware.apps.Voucher.store.Voucher', .....);
+```
+
+## DatePicker gives null back
+
+Due to an Extjs Hack from Shopware it can sometimes happen that the DatePicker always returns null. 
+
+[https://github.com/shopware/shopware/blob/5.4/engine/Library/ExtJs/overrides/Ext.form.Base.js\#L56](https://github.com/shopware/shopware/blob/5.4/engine/Library/ExtJs/overrides/Ext.form.Base.js#L56,) there "getValues" is called - but in the original ExtJS Form Base "getFieldValues" is called.
+
+### Solution
+
+Overwrite method **getSubmitData**, to return the value from **getModelData.**
+
+Example for Shopware.model.Container
+
+```javascript
+applyDateFieldConfig: function () {
+    var field = this.callParent(arguments);
+
+    field.getSubmitData = function () {
+        return this.getModelData();
+    };
+
+    return field;
+}
+```
+
 ## Emotion Element with static combobox values
 
 You can't pass store values in to a combobox in an emotion element. This guide will show you how to create a custom extjs store with static values.
@@ -94,4 +146,6 @@ Ext.define('Shopware.apps.Emotion.store.MyTestStore', {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+
 
