@@ -4,11 +4,11 @@ description: Some ExtJs tips
 
 # ExtJS &lt;3
 
-## Open backend modules with link
+## Open backend application with link
 
 With /backend?app=**\[NAME\]** can you open any Module \(/backend/?app=Article\), you can also pass supported variables like /backend/?app=\[**NAME**\]&params\[**NAME**\]=**VALUE** \(/backend/?app=Article&params\[articleId\]=1\)
 
-## Create a real checkbox in config.php
+## Create a real checkbox in config.xml
 
 ```markup
 <element type="boolean">
@@ -58,7 +58,7 @@ applyDateFieldConfig: function () {
 
 ## Emotion Element with static combobox values
 
-You can't pass store values in to a combobox in an emotion element. This guide will show you how to create a custom extjs store with static values.
+You can't pass store values in to a combobox in an emotion element like in config.xml. This example will show you how to create a custom extjs store with static values.
 
 {% code-tabs %}
 {% code-tabs-item title="Test.php" %}
@@ -151,5 +151,42 @@ Ext.define('Shopware.apps.Emotion.store.MyTestStore', {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+## Show in every form the id of the record
 
+Open developer console and insert following code and open the module.
+
+```javascript
+Ext.override(Ext.form.Panel, {
+    addedIdField: false,
+    getForm: function () {
+        var me = this,
+            insertComponent = this,
+            form = me.callParent(arguments),
+            orgMethod = form.loadRecord;
+
+        form.loadRecord = function (record) {
+            if (!me.addedIdField && record.get('id')) {
+                if (fieldSet = me.down('fieldset')) {
+                    insertComponent = fieldSet;
+                }
+
+                if (insertComponent.items.items[0].$className === 'Ext.container.Container' || insertComponent.items.items[0].superclass.$className === 'Ext.container.Container') {
+                    insertComponent = insertComponent.items.items[0];
+                }
+
+                insertComponent.insert(0, {
+                    fieldLabel: 'ID',
+                    xtype: 'displayfield',
+                    name: 'id'
+                });
+                me.addedIdField = true;
+            }
+
+            return orgMethod.apply(this, arguments);
+        }
+
+        return form;
+    },
+});
+```
 
