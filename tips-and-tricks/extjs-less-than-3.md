@@ -1,3 +1,7 @@
+---
+description: Some ExtJs tips
+---
+
 # ExtJS &lt;3
 
 ## Open backend modules with link
