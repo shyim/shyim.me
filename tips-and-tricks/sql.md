@@ -1,8 +1,8 @@
 # SQL
 
-## Article names are escaped after Shop Migration
+## Product names are escaped after Shop Migration
 
-SwagMigration does escape all product anmes. It can be solved with a simple SQL
+SwagMigration does escape all product names. It can be solved with a simple SQL
 
 ```sql
 UPDATE s_articles SET name = REPLACE(name, "&amp;", "&");

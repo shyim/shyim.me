@@ -54,7 +54,7 @@ This method loads only configuration from main shop.
 </service>
 ```
 
-Since Shopware 5.5.3 it's possible to fetch also the right config translation
+Since Shopware 5.5.3 it's also possible to fetch the right config translation
 
 ```markup
 <service id="myplugin.config" class="Shopware\Components\Plugin\CachedConfigReader">
