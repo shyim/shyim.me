@@ -10,7 +10,6 @@
 * [Smarty](tips-and-tricks/smarty.md)
 * [Plugins](tips-and-tricks/plugins.md)
 * [Event Cheat-Sheet](tips-and-tricks/event-cheat-sheet.md)
-* [Config.php Tweaks](tips-and-tricks/tips-and-tricks.md)
 * [SQL](tips-and-tricks/sql.md)
 
 ## Problems and Solutions
