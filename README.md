@@ -1,5 +1,7 @@
 ---
-description: This is my personal wiki where I share everything I know about Shopware.
+description: >-
+  Hey my name is Shyim, I am Developer at Shopware. In this personal
+  Knowledgebase I will share with you some Tips and Tricks about Shopware.
 ---
 
 # Introduction
