@@ -36,3 +36,17 @@ It's the last event before the response is send
 
 An event to create custom routing
 
+## Shopware\_Modules\_Basket\_AddArticle\_CheckBasketForArticle
+
+Can be used to manipulate how products are found in basket.
+
+Example allow adding multiple basket position of same product:
+
+```php
+public function checkBasket(\Enlight_Event_EventArgs $args)
+{
+    $qb = $args->get('queryBuilder');
+    $qb->andWhere('1=2');
+}
+```
+
