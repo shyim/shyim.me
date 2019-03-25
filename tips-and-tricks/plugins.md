@@ -110,3 +110,10 @@ $this->container->get('models')->persist($element);
 $this->container->get('models')->flush();
 ```
 
+## How to get Request object with DI?
+
+```php
+Shopware()->Container()->get('front')->Request();
+// Don't use Shopware()->Container() its just a example!
+```
+
