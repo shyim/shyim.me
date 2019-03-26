@@ -117,3 +117,53 @@ Shopware()->Container()->get('front')->Request();
 // Don't use Shopware()->Container() its just a example!
 ```
 
+## Create a controller with namespace
+
+{% code-tabs %}
+{% code-tabs-item title="MyPlugin/Controller/Frontend/Test.php" %}
+```php
+<?php
+
+namespace MyPlugin\Controller\Frontend;
+
+class Test extends \Enlight_Controller_Action
+{
+    public function indexAction()
+    {
+        die("Test");
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="MyPlugin/Subscriber/ControllerSubscriber.php" %}
+```php
+<?php
+
+namespace MyPlugin\Subscriber;
+
+use Enlight\Event\SubscriberInterface;
+use MyPlugin\Controller\Frontend\Test;
+
+class ControllerSubscriber implements SubscriberInterface
+{
+    public static function getSubscribedEvents()
+    {
+        return [
+            'Enlight_Controller_Dispatcher_ControllerPath_Frontend_Test' => 'onGetController'
+        ];
+    }
+
+    public function onGetController(\Enlight_Event_EventArgs $args)
+    {
+        return Test::class;
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Don't forgot to register the Subscriber in the services.xml.
+
