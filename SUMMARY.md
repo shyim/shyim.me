@@ -14,8 +14,8 @@
 
 ## Problems and Solutions
 
-* [General](problems-and-solutions-1/problems-and-solutions.md)
-* [Fixed Bugs](problems-and-solutions-1/fixed-bugs.md)
+* [General](problems-and-solutions/problems-and-solutions.md)
+* [Fixed Bugs](problems-and-solutions/fixed-bugs.md)
 
 ## FAQ
 
