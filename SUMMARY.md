@@ -21,4 +21,5 @@
 
 * [FAQ](faq/faq.md)
 * [Plugin System Features with Version](faq/plugin-system-features-with-version.md)
+* [Config Overview](faq/config-overview.md)
 
