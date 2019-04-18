@@ -27,3 +27,7 @@ The Security Plugin "SwagSecurityHotFix201701" drops in newer version all fields
 
 This issue happens on MariaDB Installations. You should switch to MySQL or update to the newest Shopware version.
 
+## Infinite Scrolling does not work anymore
+
+Maybe you have a empty character or line in your config.php at <?php tag
+
