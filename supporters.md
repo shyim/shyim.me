@@ -1,5 +1,5 @@
 ---
-description: "All these great people are supporters \uD83D\uDC99"
+description: "All these great people are supporters \U0001F499"
 ---
 
 # Supporters
@@ -18,7 +18,7 @@ description: "All these great people are supporters \uD83D\uDC99"
 * Lars Lohmann \(5€\)
 * Sebastian König \(5€\)
 * Alexander W.H. Wachert \(5€\)
-* Johan Moormann \(50€\)
+* Johan Moormann \(75€\)
 * David Neustadt \(5€\)
 * Christian Voss \(50€\)
 

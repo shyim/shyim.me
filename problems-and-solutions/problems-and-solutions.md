@@ -2,8 +2,8 @@
 
 ## Sending a BCC Mail does not work?
 
-Zend-Mailer does not Support BCC on SMTP transport.[ It drops the Bcc](https://github.com/shopware/shopware/blob/v5.3.4/engine/Library/Zend/Mail/Transport/Smtp.php#L233) header before sending the mail.  
-  
+Zend-Mailer does not Support BCC on SMTP transport.[ It drops the Bcc](https://github.com/shopware/shopware/blob/v5.3.4/engine/Library/Zend/Mail/Transport/Smtp.php#L233) header before sending the mail.
+
 A solution could be to clone the mail and replace the receiver
 
 ## Plugin-Manager still shows Trial-Version
@@ -29,5 +29,5 @@ This issue happens on MariaDB Installations. You should switch to MySQL or updat
 
 ## Infinite Scrolling does not work anymore
 
-Maybe you have a empty character or line in your config.php at <?php tag
+Maybe you have a empty character or line in your config.php at &lt;?php tag
 
