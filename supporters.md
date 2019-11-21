@@ -2,7 +2,12 @@
 description: "All these great people are supporters \U0001F499"
 ---
 
-# Supporters
+# Github Sponsors
+
+* Thanks <3 to [Webversiert GmbH](https://www.webversiert.de/) for sponsoring me <3
+* Thanks <3 to [Rafael Prukop](https://github.com/MBDealer) for sponsoring me <3
+
+# PayPal Supporters
 
 * Kai Neuwerth \(13,37€\)
 * Sebastian Langer \(5€\)
