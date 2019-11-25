@@ -60,8 +60,7 @@ applyDateFieldConfig: function () {
 
 You can't pass store values in to a combobox in an emotion element like in config.xml. This example will show you how to create a custom extjs store with static values.
 
-{% code-tabs %}
-{% code-tabs-item title="Test.php" %}
+{% code title="Test.php" %}
 ```php
 <?php
 
@@ -115,11 +114,9 @@ class Test extends Plugin
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="Resources/views/emotionstore.js" %}
+{% code title="Resources/views/emotionstore.js" %}
 ```javascript
 //{block name="backend/Emotion/app" append}
 Ext.define('Shopware.apps.Emotion.store.MyTestStore', {
@@ -148,8 +145,7 @@ Ext.define('Shopware.apps.Emotion.store.MyTestStore', {
 //{/block}
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Show in every form the id of the record
 

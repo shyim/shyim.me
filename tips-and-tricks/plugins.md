@@ -4,8 +4,7 @@
 
 It can be solved with a simple CompilerPass in your Plugin
 
-{% code-tabs %}
-{% code-tabs-item title="MyPlugin/Components/CompilerPass/AddTemplatePluginDirCompilerPass.php" %}
+{% code title="MyPlugin/Components/CompilerPass/AddTemplatePluginDirCompilerPass.php" %}
 ```php
 <?php
 
@@ -23,11 +22,9 @@ class AddTemplatePluginDirCompilerPass implements CompilerPassInterface
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MyPlugin.php" %}
+{% code title="MyPlugin.php" %}
 ```php
 <?php
 
@@ -40,8 +37,7 @@ class MyPlugin extends Plugin
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Inject Plugin Configuration
 
@@ -119,8 +115,7 @@ Shopware()->Container()->get('front')->Request();
 
 ## Create a controller with namespace
 
-{% code-tabs %}
-{% code-tabs-item title="MyPlugin/Controller/Frontend/Test.php" %}
+{% code title="MyPlugin/Controller/Frontend/Test.php" %}
 ```php
 <?php
 
@@ -134,11 +129,9 @@ class Test extends \Enlight_Controller_Action
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
-{% code-tabs %}
-{% code-tabs-item title="MyPlugin/Subscriber/ControllerSubscriber.php" %}
+{% code title="MyPlugin/Subscriber/ControllerSubscriber.php" %}
 ```php
 <?php
 
@@ -162,8 +155,7 @@ class ControllerSubscriber implements SubscriberInterface
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Don't forgot to register the Subscriber in the services.xml.
 

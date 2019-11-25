@@ -14,6 +14,7 @@
 
 ## Problems and Solutions
 
+* [Known Shopware 5 issues](problems-and-solutions/known-shopware-5-issues.md)
 * [General](problems-and-solutions/problems-and-solutions.md)
 * [Fixed Bugs](problems-and-solutions/fixed-bugs.md)
 
