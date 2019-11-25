@@ -18,7 +18,9 @@ Enable html emails for all or apply
 
 {% embed url="https://github.com/shopware/shopware/commit/8db7e7008cf0fba954f54918121e4685e34616e4\#diff-eb6fedb01d116450d2e537647a1ca6c0" %}
 
+#### Export module: Images are missing
 
+{% embed url="https://github.com/shopware/shopware/commit/5fcbbfacf02312dd6e92e8fa67c38112202080a6" %}
 
 
 
