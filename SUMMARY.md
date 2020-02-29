@@ -3,6 +3,8 @@
 * [Introduction](README.md)
 * [Supporters](supporters.md)
 
+## Shopware 5
+
 ## Tips & Tricks
 
 * [ExtJS &lt;3](tips-and-tricks/extjs-less-than-3.md)
