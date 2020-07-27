@@ -187,6 +187,8 @@ Plugins should be in the repository or required with Composer using [packages](h
 * Shopware does not work when its mounted as read only filesystem
 * When Plugins are not using the correct asset package, urls with result in 404 when external storage is configured
   * Contact the plugin manufacturer to correct the asset usage
+* Request IP is wrong or requests are with http
+  * You need to configure [TRUSTED\_PROXIES](https://symfony.com/doc/current/deployment/proxies.html)
 
 #### 
 
