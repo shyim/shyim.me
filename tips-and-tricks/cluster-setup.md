@@ -189,6 +189,7 @@ Plugins should be in the repository or required with Composer using [packages](h
   * Contact the plugin manufacturer to correct the asset usage
 * Request IP is wrong or requests are with http
   * You need to configure [TRUSTED\_PROXIES](https://symfony.com/doc/current/deployment/proxies.html)
+* The Shopware Core does not support Primary / Replica for MySQL by default
 
 #### 
 
