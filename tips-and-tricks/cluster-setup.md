@@ -1,12 +1,12 @@
 ---
-description: This guide assumes you are using Shopware 6.3.0.0 or upper
+description: This guide assumes you are using Shopware 6.3.0.0 or later
 ---
 
 # Cluster Setup
 
 ## What is clustering?
 
-Generally speaking, clustering is a way to link multiple computers for a certain purpose. Usually this purpose is to increase availability and / or performance of the setup and has several benefits:
+Generally speaking, clustering is a way to link multiple containers and / or servers for a certain job in the setup. The purpose is usually to increase the availability and / or performance of the setup and has amongst other things the following benefits:
 
 * you can introduce redundancy for any single component \(e.g. cache, appserver or database\). Even if a component fails, the shop will still work, as there is no "single point of failure"
 * the load \(i.e. the users\) can be distributed across the cluster. So there is not a single appserver that will need to handle all users - but all users are distributed across all available appservers.
