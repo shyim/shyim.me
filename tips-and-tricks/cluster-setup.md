@@ -1,3 +1,7 @@
+---
+description: This guide assumes you are using Shopware 6.3.0.0 or upper
+---
+
 # Cluster Setup
 
 ## What is clustering?
@@ -59,9 +63,118 @@ By default Shopware writes in following folders:
 
 ## App Server / Container
 
-To get them in sync you should consider using an external storage like S3, GCP etc. [See this page for an example configuration](using-external-storage.md). The logs should be aggregated to one place using an tool like FileBeat, Datadog etc. Choose your favorite.
+To get them in sync you should consider using an external storage like S3, GCP etc. [See this page for an example configuration](). The logs should be aggregated to one place using an tool like FileBeat, Datadog etc. Choose your favorite.
 
 The JWT Certificate is static, this needs to be only shared once.
+
+### Example Storage Configuration
+
+{% code title="config/packages/storage.yaml" %}
+```yaml
+shopware:
+    filesystem:
+        private:
+            type: "amazon-s3"
+            config:
+                bucket: "documents"
+                endpoint: "http://minio:9000"
+                use_path_style_endpoint: true
+                region: 'local'
+                credentials:
+                    key: AKIAIOSFODNN7EXAMPLE
+                    secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+                options:
+                    visibility: "private"
+        public:
+            type: "amazon-s3"
+            url: 'http://s3.localhost/media'
+            config:
+                bucket: "media"
+                endpoint: "http://minio:9000"
+                use_path_style_endpoint: true
+                region: 'local'
+                credentials:
+                    key: AKIAIOSFODNN7EXAMPLE
+                    secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+                options:
+                    visibility: "public"
+        theme:
+            type: "amazon-s3"
+            url: 'http://s3.localhost/theme'
+            config:
+                bucket: "theme"
+                endpoint: "http://minio:9000"
+                use_path_style_endpoint: true
+                region: 'local'
+                credentials:
+                    key: AKIAIOSFODNN7EXAMPLE
+                    secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+                options:
+                    visibility: "public"
+        asset:
+            type: "amazon-s3"
+            url: 'http://s3.localhost/asset'
+            config:
+                bucket: "asset"
+                endpoint: "http://minio:9000"
+                use_path_style_endpoint: true
+                region: 'local'
+                credentials:
+                    key: AKIAIOSFODNN7EXAMPLE
+                    secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+                options:
+                    visibility: "public"
+        sitemap:
+            type: "amazon-s3"
+            url: 'http://s3.localhost/sitemap'
+            config:
+                bucket: "sitemap"
+                endpoint: "http://minio:9000"
+                use_path_style_endpoint: true
+                region: 'local'
+                credentials:
+                    key: AKIAIOSFODNN7EXAMPLE
+                    secret: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+                options:
+                    visibility: "public"
+```
+{% endcode %}
+
+### Example Cache Configuration
+
+This config assumes you have the env variables "REDIS\_CACHE\_HOST", "REDIS\_CACHE\_PORT" and "REDIS\_CACHE\_DATABASE"
+
+{% code title="config/packages/redis.yaml" %}
+```yaml
+framework:
+    cache:
+        app: cache.adapter.redis
+        system: cache.adapter.redis
+        pools:
+            serializer:
+                adapter: cache.adapter.redis
+            annotations:
+                adapter: cache.adapter.redis
+            property_info:
+                adapter: cache.adapter.redis
+            messenger:
+                adapter: cache.adapter.redis
+            property_access:
+                adapter: cache.adapter.redis
+        default_redis_provider: "redis://%env(REDIS_CACHE_HOST)%:%env(REDIS_CACHE_PORT)%/%env(REDIS_CACHE_DATABASE)%"
+```
+{% endcode %}
+
+### Example Session Configuration
+
+You will need first to install the Redis PHP Extension.
+
+{% code title="php.ini" %}
+```text
+session.save_handler = redis
+session.save_path = "tcp://REDIS_HOST:REDIS_PORT?database=DB"
+```
+{% endcode %}
 
 ## Plugins
 
@@ -71,6 +184,9 @@ Plugins should be in the repository or required with Composer using [packages](h
 
 * Workers are still running with old code.
   * The workers can be stopped with the command \`\`bin/console messenger:stop-workers\`\` before/after rolling out the new code.
-* 
+* Shopware does not work when its mounted as read only filesystem
+* When Plugins are not using the correct asset package, urls with result in 404 when external storage is configured
+  * Contact the plugin manufacturer to correct the asset usage
+
 #### 
 

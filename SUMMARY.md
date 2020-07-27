@@ -6,7 +6,6 @@
 ## Tips & Tricks
 
 * [Cluster Setup](tips-and-tricks/cluster-setup.md)
-* [Using external Storage](tips-and-tricks/using-external-storage.md)
 
 ## Problems and Solutions
 
