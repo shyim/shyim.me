@@ -60,13 +60,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/shyim/shyim.me/edit/master//',
+            'https://github.com/shyim/shyim.me/edit/new/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/shyim/shyim.me/edit/master/',
+            'https://github.com/shyim/shyim.me/edit/new/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
