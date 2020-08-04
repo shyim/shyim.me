@@ -1,0 +1,18 @@
+name: Deploy
+on:
+    push: 
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Create config
+              run: mkdir ~/.kube; echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
+              
+            - name: Open IPFS Tunnel
+              run: kubectl -n ipfs port-forward ipfs-ipfs-0 5001:5001 &
+
+            - name: Download IPFS
+              run: wget https://github.com/ipfs/go-ipfs/releases/download/v0.6.0/go-ipfs_v0.6.0_linux-amd64.tar.gz
