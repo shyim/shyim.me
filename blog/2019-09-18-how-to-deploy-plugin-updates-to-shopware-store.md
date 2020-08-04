@@ -17,14 +17,7 @@ You will need
 * a Plugin which based on the 5.2 Pluginsystem or Shopware 6 Plugin
 * a Continuous Integration (i will use Travis as example)
 * Credentials for the Shopware Account
-* The **PLUGIN_ID** from the Account
 * [FroshPluginUploader](https://github.com/FriendsOfShopware/FroshPluginUploader/)
-    
-### How to get the PLUGIN_ID?
-
-* Visit the Account and Login
-* Go to the Detail page of your Plugin
-* Extract the id from the URL (e.g https://account.shopware.com/producer/plugins/ **8176**)
 
 ### Prepare the Plugin itself
 
@@ -44,17 +37,16 @@ As first you should define following environment variables as secret in your fav
 
 * ACCOUNT_USER - Username of Shopware Account
 * ACCOUNT_PASSWORD - Password of Shopware Account
-* PLUGIN_ID - The obtained plugin id
     
 
 As next we setup a job to build the store ready plugin zip. The Uploader has an command to generate an zip file for your
 ```
-php frosh-plugin-uploader.phar plugin:zip:dir [Path to Git Folder]
+php frosh-plugin-uploader.phar ext:zip:dir [Path to Git Folder]
 ```
 
 After building an zip, we validate the zip file using the uploader with
 ```
-php frosh-plugin-uploader.phar plugin:validate my-plugin.zip
+php frosh-plugin-uploader.phar ext:validate my-plugin.zip
 ```
 
 This will check all requirements from the Uploader and also from the Plugin Guidelines. which are also describe in [Prepare the Plugin itself](#preparethepluginitself)
@@ -62,13 +54,13 @@ This will check all requirements from the Uploader and also from the Plugin Guid
 After the validating you can sync the **optional** folder `Resources/store` to the account with
 
 ```
-php frosh-plugin-uploader.phar plugin:update FroshPerformance
+php frosh-plugin-uploader.phar ext:update FroshPerformance
 ```
 
 As last step you can upload the zip with
 
 ```
-php frosh-plugin-uploader.phar plugin:upload my-plugin.zip
+php frosh-plugin-uploader.phar ext:upload my-plugin.zip
 ```
 
 The command will also wait for the automatic code-review and will fail, if its not green. Reuploading same version will replace existing binary.
