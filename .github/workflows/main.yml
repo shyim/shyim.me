@@ -27,4 +27,11 @@ jobs:
               run: npm run build
             
             - name: Publish to IPFS
-              run: ./go-ipfs/ipfs add -r build/ --api=/ip4/127.0.0.1/tcp/5001 -Q
+              run: | 
+                export HASH=$(./go-ipfs/ipfs add -r build/ --api=/ip4/127.0.0.1/tcp/5001 -Q)
+                echo ::set-output name=HASH::$HASH
+              id: get_hash
+    
+            - name: Test Hash
+              run: ${{ steps.get_hash.outputs.HASH }}
+               
