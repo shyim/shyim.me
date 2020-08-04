@@ -34,12 +34,11 @@ jobs:
             
             - name: Update DNS
               env:
-                  CF_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
-                  CF_ACCOUNT: ${{ secrets.CLOUDFLARE_EMAIL }}
+                  CF_TOKEN: ${{ secrets.CF_TOKEN }}
+                  IPFS_CIF: ${{ steps.get_hash.outputs.HASH }}
               run: |
-                  git clone https://github.com/bAndie91/cloudflare-cli.git
-                  ./cloudflare-cli/cloudflare delete record shyim.me TXT _dnslink || true
-                  ./cloudflare-cli/cloudflare add record shyim.me TXT _dnslink 'dnslink=/ipfs/${{ steps.get_hash.outputs.HASH }}/'
+                  go get github.com/cloudflare/cloudflare-go
+                  go run dns.go
                   
     
 
