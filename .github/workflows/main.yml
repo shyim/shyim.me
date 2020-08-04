@@ -32,6 +32,14 @@ jobs:
                 echo ::set-output name=HASH::$HASH
               id: get_hash
     
-            - name: Test Hash
-              run: ${{ steps.get_hash.outputs.HASH }}
+            - name: Update DNSLink
+              env:
+                CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+                RECORD_DOMAIN: 'shyim.me'
+                RECORD_NAME: '_dnslink'
+                CLOUDFLARE_TOKEN_ZONE_ID: ${{ secrets.CLOUDFLARE_TOKEN_ZONE_ID }}
+              id: dnslink
+              uses: textileio/cloudflare-update-dnslink@master
+              with:
+                cid: ${{ steps.get_hash.outputs.HASH }}
                
