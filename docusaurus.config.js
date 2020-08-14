@@ -16,13 +16,18 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/shopware-5/introduction',
+          type: 'docsVersionDropdown',
+          position: 'left',
+          nextVersionLabel: 'Shopware 6',
+        },
+        {
+          to: 'docs/next/introduction',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
-        {to: 'docs/supporters', label: 'Supports', position: 'left'},
+        {to: 'supporters', label: 'Supports', position: 'left'},
         {
           href: 'https://github.com/shyim',
           label: 'GitHub',
@@ -70,7 +75,7 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
+        }
       },
     ],
   ],

@@ -71,7 +71,7 @@ function Home() {
                 'button button--outline button--secondary button--lg',
                 styles.getStarted,
               )}
-              to={useBaseUrl('docs/shopware-5/introduction')}>
+              to={useBaseUrl('docs/next/introduction')}>
               Visit my Brain
             </Link>
           </div>
