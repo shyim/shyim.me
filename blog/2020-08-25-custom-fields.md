@@ -43,8 +43,7 @@ We learned before they don't have a Schema. So we have to index the custom Field
 
 ## But when it's okay to use it?
 
-* When you don't need to
- * Filter / Aggregate / Search on it
+* When you don't need to Filter / Aggregate / Search on it
 * When it's okay to be exposed in the Public API (Sales Channel / Store API)
 
 ## But Entity Extensions are so annoying to create
