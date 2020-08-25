@@ -28,6 +28,7 @@ Let's start with a simple Pro Contra list.
    * Hard to modify using SQL
    * Cannot have associations
    * Slow on SQL Filtering, Aggregation
+* Loaded by default on the entities
 * Support between MySQL and MariaDB differs and Performance
 * Cannot have Flags. All fields are public using Sales-Channel / Store-API
 * Cause it does not have a Schema they will be indexed as `dynamic` in Elasticsearch. This brings lot of other problems
