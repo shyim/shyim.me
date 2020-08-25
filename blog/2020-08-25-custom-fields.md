@@ -43,7 +43,7 @@ You can. **But**...
 
 We learned before they don't have a Schema. So we have to index the custom Fields with **dynamic** enabled. With this option Elasticsearch tries to find the best suitable data type for your field. When we have multiple data types in the same field across entries the indexing will fail. Cause Elasticsearch decided to use first best suitable data type and rejects values does not match it.
 
-## But when it's okay to use it?
+## But when is it okay to use them?
 
 * When you don't need to Filter / Aggregate / Search on it
 * When it's okay to be exposed in the Public API (Sales Channel / Store API)
