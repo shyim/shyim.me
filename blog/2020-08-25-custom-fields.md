@@ -1,6 +1,6 @@
 ---
-id: shopware-6-custom-fields-the-love
-title: The love with the Custom Fields
+id: shopware-6-dont-like-custom-fields
+title: Why I don't like Custom fields?
 author: Shyim
 author_title: Developer @ Shopware
 author_url: https://github.com/shyim
