@@ -8,7 +8,9 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [shopware]
 ---
 
-Normally every project needs custom values saved on products or another entities. Shop ware does offer by default Custom fields. It looks nice, but it can produce very fast issues.
+Normally every project needs custom values saved on products or another entities. Shopware does offer by default Custom fields. It looks nice, but it can produce very fast issues.
+
+Before we start: **This is my opinion**
 
 Let's start with a simple Pro Contra list.
 
@@ -23,8 +25,8 @@ Let's start with a simple Pro Contra list.
 
 * Custom Fields are schema less. You can save anything in it
 * They are saved as JSON
- * Hard to modify using SQL
- * Cannot have associations
+   * Hard to modify using SQL
+   * Cannot have associations
  * Slow on SQL Filtering, Aggregation
 * Support between MySQL and MariaDB differs and Performance
 * Cannot have Flags. All fields are public using Sales-Channel / Store-API
