@@ -37,7 +37,7 @@ Let's start with a simple Pro Contra list.
 The most problems are introduced cause of the usage of an JSON field. In SQL the accessed fields needs to be extracted. This takes some time of course. 
 On a bigger shop using many products this could leak to performance issues in the listing when it's used inside a product filter. 
 
-## But when search / filtering / aggregation is slow. Can i not just use Elasticsearch?
+## But when search / filtering / aggregation is slow. Can I not just use Elasticsearch?
 
 You can. **But**...
 
