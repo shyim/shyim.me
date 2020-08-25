@@ -45,8 +45,8 @@ We learned before they don't have a Schema. So we have to index the custom Field
 
 * When you don't need to
  * Filter / Aggregate / Search on it
-* When it's okay its exposed in the Public API
+* When it's okay to be exposed in the Public API (Sales Channel / Store API)
 
-## But Entity Extensions are so annoying to create for each plugin
+## But Entity Extensions are so annoying to create
 
-The generation of the entities is annoying. But I am working since some time on a generator. Give it a try. https://github.com/FriendsOfShopware/FroshDevelopmentHelper
+The generation of the entities can be annoying. But I am working since some time on a generator. Give it a try. https://github.com/FriendsOfShopware/FroshDevelopmentHelper
