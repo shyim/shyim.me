@@ -4,7 +4,7 @@ title: Extjs Tweaks
 
 ## Open backend application with link
 
-With /backend?app=**\[NAME\]** can you open any Module \(/backend/?app=Article\), you can also pass supported variables like /backend/?app=\[**NAME**\]&params\[**NAME**\]=**VALUE** \(/backend/?app=Article&params\[articleId\]=1\)
+With /backend?app=**\[NAME\]** can you open any Module \(/backend/?app=Article\), you can also pass supported variables like /backend/?app=\[**NAME**\]&amp;params\[**NAME**\]=**VALUE** \(/backend/?app=Article&amp;params\[articleId\]=1\)
 
 ## Create a real checkbox in config.xml
 
