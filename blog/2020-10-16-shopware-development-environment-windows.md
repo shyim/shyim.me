@@ -30,7 +30,8 @@ At first we need to install WSL 2 and Docker Desktop. Please follow the tutorial
 * Click on the GWSL taskbar icon
 * Choose GWSL Distro Tools
 * Enable Auto-Export Display
-* Configure Firewall like in [Documentation](https://opticos.github.io/gwsl/tutorials/manual.html#installing-gwsl)
+
+and Configure Firewall like in [Documentation](https://opticos.github.io/gwsl/tutorials/manual.html#installing-gwsl)
 
 ### Docker Desktop:
 
