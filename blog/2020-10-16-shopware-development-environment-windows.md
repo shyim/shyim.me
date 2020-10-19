@@ -15,7 +15,7 @@ I use at work mostly Linux, but at Home I prefer Windows (Gaming). In this short
 * WSL 2
 * Docker Desktop for Windows
 * Ubuntu / Debian
-* [GWSL](https://www.microsoft.com/store/productId/9NL6KD1H33V3) (X-Server at Windows)
+* [GWSL](https://www.microsoft.com/en-us/p/gwsl/9nl6kd1h33v3) (X-Server at Windows)
 * Development Docker Setup or My own Docker Setup. (Will use my own here)
 
 At first we need to Install WSL 2 and Docker Desktop. Please follow the Tutorial from below.
