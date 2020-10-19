@@ -58,7 +58,7 @@ At first we need to clone the repository
 git clone https://github.com/shyim/shopware-docker ~/Apps/shopware-docker
 
 # Create an shortcut to be able to run `swdc` everywhere
-sudo ln -s /home/<REPLACE YOUR LINUX USERNAME>/Apps/shopware-docker/swdc /usr/local/bin/swdc
+sudo ln -s /home/$USER/Apps/shopware-docker/swdc /usr/local/bin/swdc
 ```
 
 That should be all to have an installed `swdc`. Next we will install one example SW6 setup with the production template:
