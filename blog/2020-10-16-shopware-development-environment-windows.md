@@ -8,7 +8,7 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [shopware]
 ---
 
-At work I mostly use Linux, but at home I prefer Windows due to gaming. In this short Tutorial I would like to share my Windows setup with you.
+At work I use Linux, but at home I prefer Windows due to gaming. In this short Tutorial I would like to share my Windows setup with you.
 
 ## My recommended setup includes:
 
