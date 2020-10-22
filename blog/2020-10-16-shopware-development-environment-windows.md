@@ -98,6 +98,19 @@ swdc storefront-watch sw6
 # Running at localhost:9998
 ```
 
+## Limiting WSL 2 Resources
+
+By default WSL uses up to 80% of your Resources. You can limit them by creating a `.wslconfig` file in your Home directory in **Windows**.
+
+Example configuration:
+
+```ini
+[wsl2]
+memory=8GB
+localhostForwarding=true
+processors=4
+```
+
 ## Conclusion
 
 We have a running WSL 2 with Docker, X-Server and SWDC. We can open the shop in the browser and use the admin and storefront watcher. To see all capabilities of `swdc` see [Repository](https://github.com/shyim/shopware-docker).
