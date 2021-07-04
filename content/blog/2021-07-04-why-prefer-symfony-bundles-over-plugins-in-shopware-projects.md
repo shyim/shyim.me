@@ -44,7 +44,7 @@ You could integrate your Bundle code into the `src` folder of the template and r
 
 # One Bundle per project or multiple ones?
 
-When you need that code shared, you should think about creating a new bundle and sharing it with a composer package. This depends also how you structure code internally.
+When you need to share your code, you should think about creating a new bundle and sharing it with a composer package. This depends also how you structure code internally.
 Personally, I would place any code, as well as the theme, inside one single bundle. This reduces the headache regarding decorator priorities in the DI, or order of templates.
 
 ## When should I prefer plugins?
