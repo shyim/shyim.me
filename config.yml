@@ -10,7 +10,7 @@ buildExpired: false
 params:
     env: production
     title: Shyim's Brain
-    description: "Shyims Knowledgebas"
+    description: "Shyims Knowledgebase"
     keywords: [Blog, Portfolio, PaperMod]
     author: Me
     # author: ["Me", "You"] # multiple authors
