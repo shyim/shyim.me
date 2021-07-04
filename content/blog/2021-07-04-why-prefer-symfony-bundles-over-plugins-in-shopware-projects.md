@@ -23,7 +23,7 @@ You might now ask yourself: when plugins are bundles, then why did you wrote thi
 
 As an agency, you don't want the shop owner to manage your custom built extensions. The lifecycle of plugins is intended mostly for store distribution and often irrelevant in a custom built environment.
 When you make changes to a project, you want your code to be active always, regardless of the state of the shop. This makes Shopware updates smoother as well, as the upgrade process runs without plugins.
-This solves theme compile issues on update process
+This solves theme compile issues during update process, e.g.
 You don't want to manage your own built extensions for that project too in your deployment together with the other plugins from the store. 
 Also you could store the entire Code in the template of the Shopware 6 project.
 
