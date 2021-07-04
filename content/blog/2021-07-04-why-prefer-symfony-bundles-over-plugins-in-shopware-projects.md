@@ -1,6 +1,6 @@
 ---
 id: shopware-symfony-bundles
-title: Why Symfony bundles are better than plugins in Shopware projects for customization
+title: Why Symfony bundles are better for customization than plugins in Shopware projects
 author: Shyim
 author_title: Developer @ Shopware
 author_url: https://github.com/shyim
