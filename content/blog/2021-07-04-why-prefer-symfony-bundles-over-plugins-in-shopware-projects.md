@@ -21,7 +21,7 @@ You might now ask yourself: when plugins are bundles, then why did you wrote thi
 
 ## The benefits of working with a Bundle
 
-As an agency you don't want that the shop owner can manage your built extensions. The lifecycle of the plugins is mostly intended for store distribution.
+As an agency, you don't want the shop owner to manage your custom built extensions. The lifecycle of plugins is intended mostly for store distribution and often irrelevant in a custom built environment.
 When you make changes on a project, you want that your code is always active regardless of the state of it. This makes Shopware updates also smoother, as the upgrade process runs without plugins.
 This solves theme compile issues on update process
 You don't want to manage your own built extensions for that project too in your deployment together with the other plugins from the store. 
