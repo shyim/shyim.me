@@ -9,7 +9,7 @@ tags: [shopware]
 ---
 
 Every developer which created a Plugin did already created a Symfony Bundle. All Shopware plugins are extending from a Shopware Bundle class which extends from the Symfony Bundle.
-You might now ask yourself when plugins are bundles why did you wrote this blog post? Lets first list the difference of an plugin and the two bundles.
+You might now ask yourself: when plugins are bundles, then why did you wrote this blog post? Let's first list the differences of a plugin and the two types of bundles.
 
 | Feature                                            	| Plugin 	| Shopware Bundle 	| Symfony Bundle 	|
 |----------------------------------------------------	|--------	|-----------------	|----------------	|
