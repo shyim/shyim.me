@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Shyim&#39;s Brain</title>
+    <link>https://shyim.me/categories/</link>
+    <description>Recent content in Categories on Shyim&#39;s Brain</description>
+    <image>
+      <url>https://avatars.githubusercontent.com/u/6224096?v=4?s=400</url>
+      <link>https://avatars.githubusercontent.com/u/6224096?v=4?s=400</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://shyim.me/categories/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
