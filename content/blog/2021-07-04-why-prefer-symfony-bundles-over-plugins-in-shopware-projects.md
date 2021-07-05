@@ -47,7 +47,7 @@ You could integrate your Bundle code into the `src` folder of the template and r
 When you need to share your code, you should think about creating a new bundle and sharing it with a composer package. This depends also how you structure code internally.
 Personally, I would place any code, as well as the theme, inside one single bundle. This reduces the headache regarding decorator priorities in the DI, or order of templates.
 
-## When should I prefer plugins?
+## In what cases should I prefer plugins?
 
 - IN case you want to offer it in the Shopware store
 - In case you need to toggle your plugin during runtime, without a new deployment
