@@ -1,7 +1,6 @@
 ---
 id: shopware-symfony-bundles
-date: 2021-07-04T11:30:03+00:00
-title: Why Symfony bundles are better for customization than plugins in Shopware projects
+title: You don't need a plugin to customize a Shopware 6 project
 author: Shyim
 author_title: Developer @ Shopware
 author_url: https://github.com/shyim
@@ -22,11 +21,12 @@ You might now ask yourself: when plugins are bundles, why did you write this blo
 
 ## The benefits of working with a Bundle
 
+Having less features is sometimes better.
 As an agency, you don't want the shop owner to manage your custom built extensions. The lifecycle of plugins is intended mostly for store distribution and often irrelevant in a custom built environment.
 When you make changes to a project, you want your code to be active always, regardless of the state of the shop. This makes Shopware updates smoother as well, as the upgrade process runs without plugins.
-This solves theme compile issues during update process, e.g.
-The loading order of the bundles can be fix configured in the `config/bundles.php` file, to define the dependencies of bundles fix.
-Also you could store the entire Code in the template of the Shopware 6 project.
+This solves [theme compile issues during update process](https://github.com/adityatelange/hugo-PaperMod/discussions/456), e.g.
+The loading order of the bundles can be fix configured in the `config/bundles.php` file to fix bundle dependency issues.
+Also you could store the entire code in the template of the Shopware 6 project.
 
 ## What's about tasks that usually happen during install / update?
 
@@ -45,8 +45,9 @@ You could integrate your Bundle code into the `src` folder of the Shopware 6 pro
 
 # One Bundle per project or multiple ones?
 
-When you need to share your code, you should think about creating a new bundle and sharing it with a composer package. This depends also how you structure code internally.
-Personally, I would place any code, as well as the theme, inside one single bundle. This reduces the headache regarding decorator priorities in the DI, or order of templates.
+I personally recommand creating one bundle for the entire project and splitting it by core components like `Checkout`, `Framework` and `Content`. 
+The theme even should be inside this bundle to reduce the headache regarding decorator priorities in the DI, or order of templates.
+You should do what fits best to your development workflow and talk with your team.
 
 ## In what cases should I prefer plugins?
 
