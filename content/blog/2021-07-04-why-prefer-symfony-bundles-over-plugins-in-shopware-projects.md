@@ -30,7 +30,7 @@ Also you could store the entire Code in the template of the Shopware 6 project.
 ## What's about tasks that usually happen during install / update?
 
 When your bundle extends from Shopware bundle, your bundle will automatically register itself to the migration system. So you can write migrations as usual and run them in the CLI using the `database:migrate` command.
-Shopware keeps track also of extending the Administration etc. For tasks like creating entities, you could implement an simple command which does it for you. 
+Shopware also keeps track of extending the Administration etc. For tasks like creating entities, you could implement an simple command, which does it for you. 
 It's also easier to test a command instead a entire plugin lifecycle. 
 
 ## Bundle as a Theme?
