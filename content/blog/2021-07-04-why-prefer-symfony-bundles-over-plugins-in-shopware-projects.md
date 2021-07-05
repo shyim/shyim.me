@@ -51,7 +51,7 @@ Personally, I would place any code, as well as the theme, inside one single bund
 
 - IN case you want to offer it in the Shopware store
 - When you need to toggle your Plugin in the runtime without a new deployment
-- Need the `plugin.xml` feature. Can be done with an simple admin module and the usage of `sw-system-config` too.
+- IN case you need the `plugin.xml` feature. But this can be done with an simple admin module and the usage of `sw-system-config`, too.
 
 ## Conclusion
 
