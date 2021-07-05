@@ -9,7 +9,7 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [shopware]
 ---
 
-Every developer who has created a Plugin has already created a Symfony Bundle. All Shopware plugins are extending from a Shopware Bundle class which extends from the Symfony Bundle.
+Every developer who has created a plugin has already created a Symfony bundle. All Shopware plugins are extending from a Shopware bundle class which extends from the Symfony bundle.
 You might now ask yourself: when plugins are bundles, why did you write this blog post? First, let's list the differences of a plugin and the two types of bundles:
 
 | Feature                                            	| Plugin 	| Shopware Bundle 	| Symfony Bundle 	|
@@ -25,7 +25,7 @@ You might now ask yourself: when plugins are bundles, why did you write this blo
 As an agency, you don't want the shop owner to manage your custom built extensions. The lifecycle of plugins is intended mostly for store distribution and often irrelevant in a custom built environment.
 When you make changes to a project, you want your code to be active always, regardless of the state of the shop. This makes Shopware updates smoother as well, as the upgrade process runs without plugins.
 This solves theme compile issues during update process, e.g.
-You don't want to manage your own built extensions for that project too in your deployment together with the other plugins from the store. 
+The loading order of the bundles can be fix configured in the `config/bundles.php` file, to define the dependencies of bundles fix.
 Also you could store the entire Code in the template of the Shopware 6 project.
 
 ## What's about tasks that usually happen during install / update?
@@ -52,7 +52,8 @@ Personally, I would place any code, as well as the theme, inside one single bund
 
 - In case you want to offer it in the Shopware store
 - In case you need to toggle your plugin during runtime, without a new deployment
-- In case you need the `plugin.xml` feature. But this can be done with an simple admin module and the usage of `sw-system-config`, too.
+- In case you need the `config.xml` plugin configuration feature.
+  - A alternative way is to use [Symfony configuration](https://symfony.com/doc/current/bundles/configuration.html) or create a own admin module with `sw-config` which can render also a `config.xml`
 
 ## Conclusion
 
