@@ -37,7 +37,7 @@ It's also easier to test a command instead a entire plugin lifecycle.
 
 A bundle can be also a theme in Shopware. You just need to implement the `ThemeInterface` like [here](https://github.com/shopware/platform/blob/trunk/src/Storefront/Storefront.php#L23) and run `theme:refresh` in the console later.
 
-## How does the Bundle integrate itself?
+## How does a bundle integrate itself?
 
 The bundle can be integrated like usual in Symfony, in the `config/packages.php` [file](https://github.com/shopware/production/blob/6.4/config/bundles.php#L19).
 You could integrate your Bundle code into the `src` folder of the Shopware 6 production template and register a new namespace in the project `composer.json`
