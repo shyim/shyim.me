@@ -56,7 +56,7 @@ Personally, I would place any code, as well as the theme, inside one single bund
 ## Conclusion
 
 We used this pattern last year on the Shopware Downtown project and was a neat way to extending Shopware 6. It made for us the deployment easier as we didn't had to think about plugin installation or update stuff. 
-The new devs didn't had to install or activate the plugins. Our own migrations did run together with the Setup process. 
+The new devs didn't have to install or activate plugins. Our own migrations did run together with the setup process. 
 The code of the project is public, make your own opinon.
 
 - Integration of the bundles: https://github.com/shopwareDowntown/downtown/blob/master/src/Kernel.php#L55-L58 (Can be done in `config/bundles.php`, too. Was done there to avoid conflicts when updating templates)
