@@ -17,6 +17,7 @@ You might now ask yourself: when plugins are bundles, why did you write this blo
 | modifying Shopware                                 	| ✔️      	| ✔️               	| ✔️              	|
 | can have migrations                                	| ✔️      	| ✔️               	| ❌              	|
 | can be a theme                                     	| ✔️      	| ✔️               	| ✔️              	|
+| can modify admin / storefront with js/css           | ✔️      	| ✔️               	| ❌              	|
 | can be installed, uninstalled (lifecyle)           	| ✔️      	| ❌               	| ❌              	|
 | can be managed by the shop owner in administration 	| ✔️      	| ❌               	| ❌              	|
 
@@ -24,7 +25,7 @@ You might now ask yourself: when plugins are bundles, why did you write this blo
 
 Having less features is sometimes better.
 As an agency, you don't want the shop owner to manage your custom built extensions. The lifecycle of plugins is intended mostly for store distribution and often irrelevant in a custom built environment.
-When you make changes to a project, you want your code to be active always, regardless of the state of the shop. This makes Shopware updates smoother as well, as the upgrade process runs without plugins.
+When you make changes to a project, you want your code to be active always, regardless of the state of the shop. This makes Shopware updates smoother as well, as the upgrade process runs without plugins your code will still run.
 This solves [theme compile issues during update process](https://github.com/adityatelange/hugo-PaperMod/discussions/456), e.g.
 The loading order of the bundles can be fix configured in the `config/bundles.php` file to fix bundle dependency issues.
 Also you could store the entire code in the template of the Shopware 6 project.
