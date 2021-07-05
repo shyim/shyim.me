@@ -59,5 +59,5 @@ We used this pattern last year on the Shopware Downtown project and was a neat w
 The new devs didn't had to install or activate the plugins. Our own migrations did run together with the Setup process. 
 The code is public from the project, make your own oppion with it.
 
-- Integration of the Bundles: https://github.com/shopwareDowntown/downtown/blob/master/src/Kernel.php#L55-L58 (Can be done too in config/bundles.php. Did there to avoid conflicts when updating template)
+- Integration of the bundles: https://github.com/shopwareDowntown/downtown/blob/master/src/Kernel.php#L55-L58 (Can be done in `config/bundles.php`, too. Was done there to avoid conflicts when updating templates)
 - A example bundle with merchants https://github.com/shopwareDowntown/downtown/tree/master/src/Merchants
