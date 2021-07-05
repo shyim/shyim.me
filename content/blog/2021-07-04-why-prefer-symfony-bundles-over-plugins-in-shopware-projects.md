@@ -27,7 +27,7 @@ This solves theme compile issues during update process, e.g.
 You don't want to manage your own built extensions for that project too in your deployment together with the other plugins from the store. 
 Also you could store the entire Code in the template of the Shopware 6 project.
 
-## What's about Tasks which happens normally in Install / Update?
+## What's about tasks that usually happen during install / update?
 
 When your Bundle extends from Shopware Bundle, your bundle will automaticly register itself to the migration system. So you can write as usual migrations and run them in the cli using the `database:migrate` command.
 Shopware keeps track also of extending the Administration etc. For tasks like creating entities, you could implement an simple command which does it for you. 
