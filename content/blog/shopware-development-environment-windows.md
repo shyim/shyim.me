@@ -1,5 +1,6 @@
 ---
 id: shopware-environment-windows
+date: 2020-10-16T00:00:00
 title: Setting up a Shopware Environment with Windows
 author: Shyim
 author_title: Developer @ Shopware

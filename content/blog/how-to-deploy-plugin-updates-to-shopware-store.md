@@ -1,5 +1,6 @@
 ---
 id: how-to-deploy-to-community-store
+date: 2019-09-18T00:00:00
 title: How to deploy plugin updates automatically to the Shopware Store
 author: Shyim
 author_title: Developer @ Shopware

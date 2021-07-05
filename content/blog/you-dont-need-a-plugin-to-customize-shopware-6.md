@@ -1,5 +1,6 @@
 ---
 id: shopware-symfony-bundles
+date: 2021-07-04T23:15:59
 title: You don't need a plugin to customize a Shopware 6 project
 author: Shyim
 author_title: Developer @ Shopware

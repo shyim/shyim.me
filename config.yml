@@ -15,7 +15,6 @@ params:
     author: Me
     # author: ["Me", "You"] # multiple authors
     images: ["https://avatars.githubusercontent.com/u/6224096?v=4?s=400"]
-    DateFormat: "July 4, 2021"
     defaultTheme: dark # dark, light
     disableThemeToggle: true
 

@@ -1,5 +1,6 @@
 ---
 id: why-i-dont-like-custom-fields
+date: 2020-08-25T00:00:00
 title: Why I don't like Custom fields?
 author: Shyim
 author_title: Developer @ Shopware
