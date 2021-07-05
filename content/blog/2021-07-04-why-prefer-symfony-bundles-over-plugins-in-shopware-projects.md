@@ -49,7 +49,7 @@ Personally, I would place any code, as well as the theme, inside one single bund
 
 ## When should I prefer plugins?
 
-- When you want to provide it in the Store
+- IN case you want to offer it in the Shopware store
 - When you need to toggle your Plugin in the runtime without a new deployment
 - Need the `plugin.xml` feature. Can be done with an simple admin module and the usage of `sw-system-config` too.
 
