@@ -35,7 +35,7 @@ It's also easier to test a command instead a entire plugin lifecycle.
 
 ## Bundle as a Theme?
 
-A bundle can be also a Theme in Shopware. You will need to implement the `ThemeInterface` like [here](https://github.com/shopware/platform/blob/trunk/src/Storefront/Storefront.php#L23) and run later `theme:refresh` in the console.
+A bundle can be also a theme in Shopware. You just need to implement the `ThemeInterface` like [here](https://github.com/shopware/platform/blob/trunk/src/Storefront/Storefront.php#L23) and run `theme:refresh` in the console later.
 
 ## How will the Bundle integrated?
 
