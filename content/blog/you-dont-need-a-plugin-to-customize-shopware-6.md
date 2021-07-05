@@ -32,7 +32,7 @@ Also you could store the entire code in the template of the Shopware 6 project.
 
 ## What's about tasks that usually happen during install / update?
 
-When your bundle extends from Shopware bundle, your bundle will automatically register itself to the migration system. So you can write migrations as usual and run them in the CLI using the `database:migrate` command.
+If your bundle extends from Shopware bundle, your bundle will automatically register itself to the migration system. So you can write migrations as usual and run them in the CLI using the `database:migrate` command.
 Shopware also keeps track of extending the Administration etc. For tasks like creating entities, you could implement an simple command, which does it for you. 
 It's also easier to test a command instead a entire plugin lifecycle. 
 
@@ -47,7 +47,7 @@ You could integrate your Bundle code into the `src` folder of the Shopware 6 pro
 
 # One Bundle per project or multiple ones?
 
-I personally recommand creating one bundle for the entire project and splitting it by core components like `Checkout`, `Framework` and `Content`. 
+I personally recommend creating one bundle for the entire project and splitting it by core components like `Checkout`, `Framework` and `Content`. 
 The theme even should be inside this bundle to reduce the headache regarding decorator priorities in the DI, or order of templates.
 You should do what fits best to your development workflow and talk with your team.
 
