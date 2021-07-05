@@ -16,7 +16,7 @@ You might now ask yourself: when plugins are bundles, why did you write this blo
 |----------------------------------------------------	|--------	|-----------------	|----------------	|
 | modifying Shopware                                 	| ✔️      	| ✔️               	| ✔️              	|
 | can have migrations                                	| ✔️      	| ✔️               	| ❌              	|
-| can be a theme                                     	| ✔️      	| ✔️               	| ✔️              	|
+| can be a theme                                     	| ✔️      	| ✔️               	| ❌              	|
 | can modify admin / storefront with js/css           | ✔️      	| ✔️               	| ❌              	|
 | can be installed, uninstalled (lifecyle)           	| ✔️      	| ❌               	| ❌              	|
 | can be managed by the shop owner in administration 	| ✔️      	| ❌               	| ❌              	|
