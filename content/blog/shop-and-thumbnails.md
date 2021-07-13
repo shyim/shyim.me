@@ -22,7 +22,7 @@ The PHP community has build packages (like [spatie/image-optimizer](https://gith
 Instead of requiring optimizers installed on the server system, we could bring it with the code, isolated as WASM or as a shared library with FFI.
 These approaches are both very fast, but unfortunately, both technologies are not widely used in the PHP ecosystem.
 
-## Letting a external service do your image processing
+## Letting a external service do our image processing
 
 When we can't create the best optimized image with just plain PHP, why not let our image processing work be done by some external service? One of my favourite image processing systems is [imgproxy](https://imgproxy.net/). It can be even selfhosted, if necessary. We save the original images on the server or an external storage like S3 and just link it to our image processing server with some parameters, like width, height etc. The servers are doing the rest for us with the best possible image results.
 Such servers also offer better image formats if the browser supports it. This means, when the browser requests a `jpg` image, but the browser supports also `webp`. The server can respond to the `.jpg` file extension a `webp` image without even providing multiple links or using a [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture#the_type_attribute).
@@ -36,24 +36,24 @@ Let's do a quick `pros` and `cons` list of the usage of such software:
 - Smaller backups of the shop, as we don't have to save thumbnails
     - Can be even smaller when the original images are saved on a cloud bucket
 - Can be self-hosted, if necessary
-- Be flexible in your template and use the dimension you want instead blowing up your storage
-- Improve your global access times with some cloud image processing 
+- We can be flexible in our template and use the dimension we want instead blowing up your storage
+- Improves the global access times with some cloud image processing 
     - This mostly requires that the original image are also saved on their network
 
 **Cons:**
 
 - When the image processing service is offline, images in our shop cannot be loaded
-- When the original images are saved in a cloud bucket and you don't make backups, our deleted file will be gone
-- The choosen service needs caching or you should setup a cdn before your processing service
+- When the original images are saved in a cloud bucket and we don't make backups, our deleted file will be gone
+- The choosen service needs caching so we should setup a cdn before your processing service
 
 ## How do we integrate such external service in our shopware shops?
 
-Unfortunately, Shopware does not support the usage of an external service by default. **But** the guys from FriendsOfShopware has covered you with the [Thumbnail processor plugin](https://store.shopware.com/frosh69611263569f/thumbnailprocessor-mit-lazy-loading.html). This extension is free and can be installed from Shopware store or from Github. Special thanks there to [tinecet](https://github.com/tinect) the author of the extension.
+Unfortunately, Shopware does not support the usage of an external service by default. **But** the guys from FriendsOfShopware has covered us with the [Thumbnail processor plugin](https://store.shopware.com/frosh69611263569f/thumbnailprocessor-mit-lazy-loading.html). This extension is free and can be installed from Shopware store or from Github. Special thanks there to [tinecet](https://github.com/tinect) the author of the extension.
 
 What does the plugin for us?
 
 - Disabling the Shopware own thumbnail generation
-- Allows you to define a URL template how the storefront url needs to be generated
+- Allows us to define a URL template how the storefront url needs to be generated
     - A template looks like: `https://mycdn.shopdomain.com/{mediaPath}?width={width}&height={height}`
 - Adds lazy image loading to the storefront
 - Takes automatically care of the sizes attribute for responsive images
@@ -63,7 +63,7 @@ With the usage of an cloud-bucket like s3 we can even move the original files fr
 ## Some image processing providers list
 
 - [BunnyCDN](https://bunny.net/)
-    - not cheap with 9,5$/m per zone for image processing, but fast and including webp. You need to enable `Bunny Optimizer` and `Manipulation Engine`. Additionally, we can use really cheap storage and global traffic.
+    - not cheap with 9,5$/m per zone for image processing, but fast and including webp. We need to enable `Bunny Optimizer` and `Manipulation Engine`. Additionally, we can use really cheap storage and global traffic.
 - [imgproxy](https://imgproxy.net)
     - Opensource, can be selfhosted, fast and including webp and avif. But needs a caching in front of it, f.e. a CDN.
 - [Images.weserv.nl](https://images.weserv.nl)
