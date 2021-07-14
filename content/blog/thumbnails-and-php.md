@@ -1,7 +1,7 @@
 ---
-id: shopware-and-thumbnails
-date: 2021-07-05T23:15:59
-title: Thumbnails + Shopware + PHP = 🙈
+id: optimization-of-thumbnails-in-php
+date: 2021-07-14T12:15:59
+title: Optimization of Thumbnails in PHP
 author: Shyim
 author_title: Developer @ Shopware
 author_url: https://github.com/shyim
@@ -17,7 +17,11 @@ But can we achieve better results with only PHP?
 In PHP there are two ways how images can be generated: using the `gd`, or the `ImageMagick` extension. Both extensions are not optimized to create very small images and they are quite slow. They also lack support for newer image formats like avif (PHP 8.1 will have avif in `gd`).
 The PHP community has build packages (like [spatie/image-optimizer](https://github.com/spatie/image-optimizer)) to optimize an image after it has been uploaded by executing several optimziers in the CLI. This approach requires to have functions like `exec`, `system` or `proc_open` available, which are disabled by default on some shared hosters. Also, the optimizers need to be installed on the host system. But there are new technologies like `ffi` or `wasm` available in PHP.
 
-### Image generation using FFI / WASM
+## Pre optimize the images before uploading on client side
+
+Since the WASM support has landed in the browsers, it is also possible to optimize the image before sending it to the servers. This approach added Discourse to their platform to [reduce the file size of uploaded images](https://blog.discourse.org/2021/07/faster-user-uploads-on-discourse-with-rust-webassembly-and-mozjpeg/). This will work good in a situation where the Administration only manages the entire shop. Still, most users are using the API or Import extensions to import the products with the images. There will be client-side optimization not help as the optimization happens inside the browser.
+
+### Image generation using FFI / WASM on server-side
 
 Instead of requiring optimizers installed on the server system, we could bring it with the code, isolated as WASM or as a shared library with FFI.
 These approaches are both very fast, but unfortunately, both technologies are not widely used in the PHP ecosystem.
