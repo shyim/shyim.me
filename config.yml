@@ -6,8 +6,6 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-blackfriday:
-  hrefTargetBlank: true
 
 params:
     env: production
