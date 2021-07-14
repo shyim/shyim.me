@@ -53,7 +53,7 @@ Let's do a quick `pros` and `cons` list of the usage of such software:
 
 ## How do we integrate such external service in our shopware shops?
 
-Unfortunately, Shopware does not support the usage of an external service by default. **But** the guys from FriendsOfShopware has covered us with the [Thumbnail processor plugin](https://store.shopware.com/frosh69611263569f/thumbnailprocessor-mit-lazy-loading.html). This extension is free and can be installed from Shopware store or from Github. Special thanks there to [tinecet](https://github.com/tinect) the author of the extension.
+Unfortunately, Shopware does not support the usage of an external service by default. **But** the guys from FriendsOfShopware has covered us with the [Thumbnail processor plugin](https://store.shopware.com/frosh69611263569f/thumbnailprocessor-mit-lazy-loading.html). This extension is free and can be installed from Shopware store or from Github. Special thanks there to [tinect](https://github.com/tinect) the author of the extension.
 
 What does the plugin for us?
 
@@ -63,7 +63,7 @@ What does the plugin for us?
 - Adds lazy image loading to the storefront
 - Takes automatically care of the sizes attribute for responsive images
 
-With the usage of an cloud-bucket like s3 we can even move the original files from disk to the bucket. For this referer to the [Shopware documentation](https://developer.shopware.com/docs/guides/hosting/infrastructure/filesystem) on how to accomplish that.
+With the usage of an cloud-bucket like s3 we can even move the original files from disk to the bucket. For this refer to the [Shopware documentation](https://developer.shopware.com/docs/guides/hosting/infrastructure/filesystem) on how to accomplish that.
 
 ## Some image processing providers list
 
