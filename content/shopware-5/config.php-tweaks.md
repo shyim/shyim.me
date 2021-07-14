@@ -1,5 +1,7 @@
 ---
 title: config.php Tweaks
+aliases:
+    - /docs/config-overview
 ---
 
 ## Disable Template Cache
