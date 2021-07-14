@@ -1,6 +1,10 @@
 ---
 title: Cluster Setup
 description: This guide assumes you are using Shopware 6.3.0.0 or later
+aliases:
+    - /docs/shopware-6/cluster-setup
+    - /v/shopware6/tips-and-tricks/cluster-setup
+    - /docs/next/cluster-setup
 ---
 
 ## What is clustering?
