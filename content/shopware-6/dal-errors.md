@@ -1,5 +1,7 @@
 ---
 title: DAL exceptions
+aliases:
+    - /docs/next/dal-errors
 ---
 
 ## Expected input to be non empty non associative array.
