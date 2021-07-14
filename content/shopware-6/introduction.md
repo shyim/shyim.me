@@ -3,6 +3,8 @@ title: Introduction
 description: >-
   Hey my name is Shyim. In this personal Knowledgebase I will share with you
   some Tips and Tricks about Shopware.
+aliases:
+    - /docs/next/introduction
 ---
 
 ## How can I Contribute to this Knowledgebase?
