@@ -1,5 +1,7 @@
 ---
 title: General exceptions
+aliases:
+    - /docs/next/general-errors
 ---
 
 # PageController can't be requested via XmlHttpRequest
