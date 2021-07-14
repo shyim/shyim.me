@@ -1,12 +1,13 @@
 ---
-id: optimization-of-thumbnails-in-php
-date: 2021-07-14T12:15:59
+id: thumbnails-and-php
+date: 2021-07-14T00:15:59
 title: Optimization of Thumbnails in PHP
 author: Shyim
 author_title: Developer @ Shopware
 author_url: https://github.com/shyim
 author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3a2d46f07dd42fc2b6dee9b4b9b68bca28d2&v=4
 tags: [shopware]
+draft: false
 ---
 
 Every shop owner wants a fast online shop with the best pagespeed results. The images have a huge impact on these stats.
