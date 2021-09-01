@@ -1,6 +1,6 @@
 ---
 id: deprecation-frosh-packages
-date: 2021-09-01T00:00:01
+date: 2021-09-01T09:00:01
 title: Shopware packages is live + deprecation of packages.friendsofshopware.com
 author: Shyim
 author_title: Developer @ Shopware
