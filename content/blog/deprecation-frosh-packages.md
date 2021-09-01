@@ -9,7 +9,7 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [shopware, frosh]
 ---
 
-Today is finally the day when `Shopware packages` is being released. You mind ask what is `Shopware packages`, and what does it have to do with packages.friendsofshopware.com?
+Today is finally the day when `Shopware packages` is being released. You might ask what is `Shopware packages`, and what does it have to do with packages.friendsofshopware.com?
 Good question 🙂
 
 ## What is Shopware packages?
