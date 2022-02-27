@@ -62,7 +62,7 @@ PHP extensions can be installed using pecl. Example: `pecl install redis`
 
 Run these commands in your Terminal, and we have a running Shop of the `trunk` version of Shopware 6.
 
-"`bash
+```bash
 # Clones Shopware 6
 git clone https://github.com/shopware/platform.git
 cd platform
