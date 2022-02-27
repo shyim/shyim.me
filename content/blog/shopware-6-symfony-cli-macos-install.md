@@ -52,7 +52,7 @@ It would be best if you increase the `memory_limit` in the `/opt/homebrew/etc/ph
 
 ### Run the Webserver
 
-As we configured PHP and MySQL, we can now just run the Webserver. We need to go to our Shopware Project folder and run `symfony server:start`. The default port of the Server is 8000 and will increase if it's already in use. In default, the command shows the Symfony log and the access log. You can also use `-d' to run it in the background. See also other commands like `server:stop` (Stops the background running server), `server:status` (Shows the current state of the server) or `server:log` for the logs. Run `symfony` without arguments to see all available commands.
+As we configured PHP and MySQL, we can now just run the Webserver. We need to go to our Shopware Project folder and run `symfony server:start`. The default port of the Server is 8000 and will increase if it's already in use. In default, the command shows the Symfony log and the access log. You can also use `-d` to run it in the background. See also other commands like `server:stop` (Stops the background running server), `server:status` (Shows the current state of the server) or `server:log` for the logs. Run `symfony` without arguments to see all available commands.
 
 ### How to install other PHP extensions?
 
