@@ -78,7 +78,7 @@ composer install
 composer run setup
 
 # Start our Symnfony Webserver
-symfony server start -d
+symfony server:start -d
 ```
 
 ### Example for Setting up a project for production
@@ -99,5 +99,5 @@ composer install
 ./bin/console system:install --create-database --basic-setup
 
 # Start our Symnfony Webserver
-symfony server start -d
+symfony server:start -d
 ```
