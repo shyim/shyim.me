@@ -92,7 +92,7 @@ The cache tags of the HTTP cache are built from all the caches in the entire sta
 
 ## Final setup - reverse http cache
 
-We can now serve requests fast, but we still need to bootstrap the Symfony container and do a lookup in a Redis/Filesystem, serve the request with PHP and maybe replace some CSRF placeholders with a session. To serve the entire page without loading on our actual server, we can use a reverse HTTP cache like Varnish or external services like Fastly.
+We can now serve requests fast, but we still need to bootstrap the Symfony container and do a lookup in a Redis/Filesystem, serve the request with PHP and maybe replace some CSRF placeholders with a session. To serve the entire page without loading on our actual server, we can use a reverse HTTP cache like Varnish or external services like [Fastly](https://www.fastly.com/).
 
 With Varnish, our Infrastructure would look like this:
 
@@ -114,9 +114,49 @@ storefront:
         redis_url: "redis://redis"
 ```
 
-To invalidate, later, the pages on the reverse proxy cache Shopware needs to know all cache server hosts and a Redis server to hold the mapping of cache-key to URL. A normal site cache can have up to 100 tags in Shopware, which doesn't work well with the Varnish provided configuration so that we can hold this better in Redis. An external service like Fastly is not required as they support larger tag amounts.
+To invalidate, later, the pages on the reverse proxy cache Shopware needs to know all cache server hosts and a Redis server to hold the mapping of cache-key to URL. A normal site cache can have up to 100 tags in Shopware, which doesn't work well with the Varnish provided configuration so that we can hold this better in Redis. An external service like [Fastly](https://www.fastly.com/) is not required as they support larger tag amounts.
 
 ### CSRF and external Caching
 
 As the last step, we need to configure that the CSRF handling happens with `ajax`. By default, Shopware generates CSRF placeholders in the HTML response, caches the response, and replaces it afterward before serving it to the actual client with the real CSRF tokens. This is very smart and makes the Caching a lot easier; if you are interested in how it is working, you can find it in the [CsrfPlaceholderHandler](https://github.com/shopware/platform/blob/v6.4.9.0/src/Storefront/Framework/Csrf/CsrfPlaceholderHandler.php). 
 As we serve the cached page directly in Varnish, we cannot generate CSRF tokens. To fix this behavior, we can switch the CSRF implementation to ajax. So instead of generating CSRF tokens into the cached HTML page, we do an ajax to get the CSRF token for the form we are submitting.
+
+### The cache key and the states
+
+The Shopware stack is not called when the cache key is generated, so we must implement it in the reverse cache itself. In Varnish, we would do this in the `vcl_hash` subroutine.
+
+```vcl
+sub vcl_hash {
+    if (req.http.cookie ~ "sw-cache-hash=") {
+        hash_data("+context=" + regsub(req.http.cookie, "^.*?sw-cache-hash=([^;]*);*.*$", "\1"));
+    } elseif (req.http.cookie ~ "sw-currency=") {
+        hash_data("+currency=" + regsub(req.http.cookie, "^.*?sw-currency=([^;]*);*.*$", "\1"));
+    }
+}
+```
+
+As for the standard built-in HTTP cache, we first consider the `sw-cache-hash` and the `sw-currency` to maximize the cache hit rate. 
+
+The same process must be done for the states to skip the cache for specific situations with a `vcl_hit` subroutine.
+
+```vcl
+sub vcl_hit {
+# When the request has an sw-states cookie
+  if (req.http.cookie ~ "sw-states=") {
+     set req.http.states = regsub(req.http.cookie, "^.*?sw-states=([^;]*);*.*$", "\1");
+
+# When the client and the response has the same state skip it
+     if (req.http.states ~ "logged-in" && obj.http.sw-invalidation-states ~ "logged-in" ) {
+        return (pass);
+     }
+
+# When the client and the response has the same state skip it
+     if (req.http.states ~ "cart-filled" && obj.http.sw-invalidation-states ~ "cart-filled" ) {
+        return (pass);
+     }
+  }
+}
+```
+
+This configuration can be done more dynamically with Varnish Plus, as you can split their strings.
+
