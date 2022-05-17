@@ -11,6 +11,10 @@ tags: [shopware, hackathon]
 
 ## What is Rector?
 
+[Rector](https://github.com/rectorphp/rector) is an opensource tool to instantly upgrades and refactors the PHP code of your application. You configure some rules and modify the matching code. It is similar to the [Structural Replace](https://www.jetbrains.com/help/phpstorm/structural-search-and-replace.html#to_search_structurally) in PhpStorm but more powerful.
+
+## Why Rector?
+
 Last week I attended the first Hockethon (combination of Hackathon + Hockenheim) of the [Kellerkinder](https://www.kellerkinder.de/). That event was unique, and I want to thank Kellerkinder for organizing such an event.
 
 I teamed up with [Manuel](https://twitter.com/_MaHoDi_) we made pretty fast progress to enable HTTP caching in the store-API. As the Storefront already has HTTP caching, we used the same logic. But in the end, we had a reference in the Core store-API to the HTTP cache of the storefront bundle. So to do it right, we had to extract the HTTP cache logic of Storefront into the core component.
