@@ -9,7 +9,7 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [shopware, hackathon]
 ---
 
-Last week I attended the first Hockethon (combination of Hackathon + Hockenheim) of the [Kellerkinder](https://www.kellerkinder.de/). That event was unique, and I want to thank Kellerkinder for organizing such an event.
+Last week I attended the first Hockethon (combination of Hackathon + Hockenheim) of the [Kellerkinder](https://www.kellerkinder.de/). That event was unique, and I want to thank Kellerkinder for organizing such an event. If you are interested in what we all did on that event, check out the [blog post from Marco](https://marco-steinhaeuser.de/hockethon-may-2022-kellerkinder.html)
 
 I teamed up with [Manuel](https://twitter.com/_MaHoDi_) we made pretty fast progress to enable HTTP caching in the store-API. As the Storefront already has HTTP caching, we used the same logic. But in the end, we had a reference in the Core store-API to the HTTP cache of the storefront bundle. So to do it right, we had to extract the HTTP cache logic of Storefront into the core component.
 While migrating code between two components, we thought this task is so brain-dead, so let's use Rector to do this for us.
