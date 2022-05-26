@@ -241,3 +241,4 @@ realpath_cache_ttl=3600
 redis.clusters.cache_slots = 1
 ```
 
+Most of the configuration can be also found in the Shopware Docs at [Performance Tweaks](https://developer.shopware.com/docs/guides/hosting/performance/performance-tweaks)
