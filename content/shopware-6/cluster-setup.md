@@ -235,5 +235,5 @@ The Elasticsearch Indexing can fill very fast the Queue. So you should take care
   * Contact the plugin manufacturer to correct the asset usage
 * Request IP is wrong or requests are made with HTTP
   * You need to configure [TRUSTED\_PROXIES](https://symfony.com/doc/current/deployment/proxies.html)
-* The Shopware Core does not support Primary / Replica for MySQL by default
+* The Shopware Core does not support Primary / Replica for MySQL by default (you need to [configure](https://developer.shopware.com/docs/guides/hosting/infrastructure/database-cluster#configure-the-database-cluster) it)
 * Sitemap cannot be generated with active Elasticsearch without fallback to DBAL
