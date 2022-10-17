@@ -163,7 +163,7 @@ RUN sudo add-apt-repository ppa:ondrej/php -y && \
     echo "password=root" >> ~/.my.cnf
 ```
 
-## Read to copy and paste project
+## Copy-Paste Templates
 
 ### Shopware Extensions
 
