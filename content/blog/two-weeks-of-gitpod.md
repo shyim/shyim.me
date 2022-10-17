@@ -213,6 +213,8 @@ Gitpod offers a free plan for their SaaS offering with 50 hours/month. If you ne
 
 Gitpod works even very well in an ICE train with bad internet. I love to use it for small changes in my projects or other open-source projects. It works very good with VS-Code in the browser or as a Desktop Client. JetBrains IDE feels like lagging for my taste. But they are working on adding work class support to get machines with more resources. Also, I guess it's more an issue of the IDE from JetBrains than Gitpod as JetBrains new IDE Fleet feels much more responsive. 
 
-I will get next days access to the new work classes and will test PhpStorm with it to see if its performances better. It has the opportunity for me to replace development locally, so I can finally swap between devices and continue my work. The device can be also a Raspberry Pi / Chromebook / iPad with Keyboard.  
+I will get next days access to the new work classes and will test PhpStorm with it to see if its performances better. It has the opportunity for me to replace development locally, so I can finally swap between devices and continue my work. The device can be also a Raspberry Pi / Chromebook / iPad with Keyboard.
+
+If you want to test Shopware with an extension in Gitpod, you can use my [FroshTools](https://gitpod.io/#https://github.com/FriendsOfShopware/FroshTools)
 
 I hope you like this article, and you will give Gitpod a try. If you have any questions, feel free to ask them in the comments.
