@@ -9,7 +9,7 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [gitpod, cloud, development, vscode, jetbrains]
 ---
 
-I am working together with [pumpi](https://github.com/pumpi) on a project named [shopmon](https://github.com/FriendsOfShopware/shopmon) (will be annoucned when it's done) and he is lazy to setup a local development environment and I was lazy to show him that. So I gave him a instance of VSCode running on Web on my personal VPS.
+I am working together with [pumpi](https://github.com/pumpi) on a project named [shopmon](https://github.com/FriendsOfShopware/shopmon) (will be announced when it's done) and he is lazy to set up a local development environment, and I was lazy to show him that. So I gave him an instance of VS Code running on Web on my personal VPS.
 Everything was fine until I broke somehow IPv6 networking with Docker containers (I really hate networking), so we looked for an alternative.
 
 ## Stackblitz
@@ -18,9 +18,9 @@ We tried [Stackblitz](https://stackblitz.com/) first, but it was really working 
 
 ## Gitpod
 
-So I remembered that we talked at the [Barcamp](https://www.kellerkinder.de/barcamp) (must visit event if you are interested into Shopware) about Gitpod. So we tried it and it was really nice. We could start a development environment for a GitHub repository with a single click. It was really fast and we could start coding directly. We also had a preview environment for each branch and pull request. So we could test our changes directly in the browser by starting a Gitpod for that branch.
+So I remembered that we talked at the [Barcamp](https://www.kellerkinder.de/barcamp) (must visit event if you are interested into Shopware) about Gitpod. So we tried it and it was really nice. We could start a development environment for a GitHub repository with a single click. It was really fast, and we could start coding directly. We also had a preview environment for each branch and pull request. So we could test our changes directly in the browser by starting a Gitpod for that branch.
 
-The project itself is a Vitejs project with Vue 3 and TypeScript. So not really a big project. A default Gitpod has 6 vCPUs and 12GB of RAM. So it was more than enough for this simple project.
+The project itself is a Vitejs project with Vue 3 and TypeScript. So not really a big project. A default Gitpod has 6 vCPUs and 12 GB of RAM. So it was more than enough for this simple project.
 
 So lets quickly look into how our `.gitpod.yml` looks like:
 
@@ -40,7 +40,7 @@ vscode:
     - redhat.vscode-xml
 ```
 
-First we can define ports that should be opened. We can also open them in the browser directly. We also can define extensions that should be installed. We have to use the extension ID from the marketplace. We can also define a `tasks` section, but we didn't need it for this project. It is not required to define the ports, if a port listens you get a notification that you can open it in the browser. But the list of ports is shown in the UI and can automatically open a Window if the port is listening.
+First we can define ports that should be opened. We can also open them in the browser directly. We also can define extensions that should be installed. Likewise, we have to use the extension ID from the marketplace. We can also define a `tasks` section, but we didn't need it for this project. It is not required to define the ports, if a port listens you get a notification that you can open it in the browser. But the list of ports is shown in the UI and can automatically open a Window if the port is listening.
 
 The UI looks like:
 
@@ -51,15 +51,15 @@ The UI looks like:
 Setting up a Gitpod for a Vue project is simple. But what if you have a more complex project? For example a Shopware project with a MySQL database. For this I tried to add Gitpod to one of my Shopware Extensions on GitHub. So the tasks are basically:
 
 - Start a MySQL Server
-- Clone Shopware
+- Clone Shopware repository
 - Install Shopware
 - Install Extension
 
-So to start a MySQL server I decided to use the official MySQL Docker image. So I created a new "task" in the `.gitpod.yml`. Tasks are Shell scripts that are executed in the container. They have three entrypoints:
+So to start a MySQL server I decided to use the official MySQL Docker image. So I created a new "task" in the `.gitpod.yml`. Tasks are Shell scripts that are executed in the container. They have three entry points:
 
 - `before` is executed before the workspace is started
 - `init` is executed after the workspace is started
-- `command` is executed after the workspace is started and the init command is finished
+- `command` is executed after the workspace is started and the "init" command is finished
 
 ```yml
 image:
@@ -114,25 +114,25 @@ So what we do is in the init step:
 - Create a new Shopware 6 project using Symfony Flex template
 - Adjust some environment variables
     - The `gp url 8000` command returns the URL of the Gitpod workspace when something listens on port **8000**
-    - Allow trusted proxies for gitpod network
+    - Allow trusted proxies for Gitpod network
 - Install Shopware
 - Move our extension repository to the right folder
 
-As you can prebuild a workspace. Which means that the workspace is started and the init command is executed. So the next time you start a workspace, the init command is skipped and the command part is executed. So you have a quicker up time for your workspace.
+As you can prebuild a workspace. Which means that the workspace is started, and the init command is executed. So the next time you start a workspace, the init command is skipped, and the command part is only executed. So you have a quicker uptime for your workspace.
 
 In the command part we do:
 
 - `docker ps` is used to register the ports of the before running MySQL server
 - `gp ports await 3306` waits until the port is open
 - `until mysqladmin ping; do sleep 1; done` waits until the MySQL server is reachable
-- Update the sales channel domain to our current gitpod domain
-- Start the Symfony webserver
+- To Update the sales channel domain to our current Gitpod domain
+- Start the Symfony web server
 
-You may ask now is Symfony CLI preinstalled? Nope, but you can install it with a custom docker file referenced with `image.file` like the first line in our yaml.
+You may ask now is Symfony CLI preinstalled? Nope, but you can install it with a custom docker file referenced with `image.file` like the first line in our YAML.
 
 ## Installing additional software
 
-So we can install additional software with a custom docker file. So we can install the Symfony CLI and the MySQL client. So we can use the MySQL client in the terminal and the Symfony CLI to start the webserver.
+So we can install additional software with a custom docker file. In this example we install nodejs, php, and symfony-cli. Normally a workspace uses `gitpod/workspace-full`, which contains a lot of preinstalled software. If something is missing you have to install it using a custom docker file. To reduce the image size we will use the base image and install only what we need.
 
 ```dockerfile
 FROM gitpod/workspace-base:latest
@@ -175,11 +175,11 @@ If you are using already the new Symfony Flex template. Just run `composer req g
 
 ## Other IDEs
 
-Gitpod does not only support VSCode in Web/Desktop. It supports also IDEs by Jetbrains like PhpStorm, WebStorm and many more. You need to install to local Jetbrains Product the Gitpod extension or just install [Jetbrains Gateway](https://www.jetbrains.com/remote-development/gateway/).
+Gitpod does not only support VS Code in Web/Desktop. It supports also IDEs by JetBrains like PhpStorm, WebStorm and many more. You need to install to local JetBrains Product the Gitpod extension or just install [Jetbrains Gateway](https://www.jetbrains.com/remote-development/gateway/).
 
 ![Jetbrains Gateway](https://i.imgur.com/9uFQcGv.png)
 
-So you can specify like in VSCode [your wanted Jetbrains Plugins](https://www.gitpod.io/docs/references/gitpod-yml#jetbrainsplugins). If your project is very big, you can also enable prebuild for the Jetbrain IDEs. It will prebuild the IDE index in the Gitpod prebuild step. So you have a faster startup time for your IDE and don't have to wait for the indexing.
+So you can specify like in VS Code [your wanted Jetbrains Plugins](https://www.gitpod.io/docs/references/gitpod-yml#jetbrainsplugins). If your project is very big, you can also enable prebuild for the JetBrains IDEs. It will prebuild the IDE index in the Gitpod prebuild step. So you have a faster startup time for your IDE and don't have to wait for the indexing.
 
 You can use also already Fleet by launching it by own like:
 
@@ -192,7 +192,7 @@ If you like more terminal editors like neovim, you can also connect straight to 
 
 ## Customizing
 
-You can customize for you as user the installation with an Dotfiles repository. This repository will be cloned to the home directory of the user. So you can customize the terminal, the IDE and many more
+You can customize for you as user the installation with a dotfiles repository. This repository will be cloned to the home directory of the user. So you can customize the terminal, the IDE and many more
 
 ![Dotfiles](https://i.imgur.com/Ynlae49.png)
 
@@ -203,8 +203,7 @@ Host *.gitpod.io
     ForwardAgent yes
 ```
 
-so when you join using VSCode on your local machine, you can use your local SSH keys to connect to external services. The credentials to push to your repository is configured by default
-
+So when you connect to Gitpod using VS Code on your local machine, you can use your local SSH keys to connect to external services. The credentials to push to your repository is configured by default
 
 ## Pricing
 
@@ -212,6 +211,8 @@ Gitpod offers a free plan for their SaaS offering with 50 hours/month. If you ne
 
 ## Conclusion
 
+Gitpod works even very well in an ICE train with bad internet. I love to use it for small changes in my projects or other open-source projects. It works very good with VS-Code in the browser or as a Desktop Client. JetBrains IDE feels like lagging for my taste. But they are working on adding work class support to get machines with more resources. Also, I guess it's more an issue of the IDE from JetBrains than Gitpod as JetBrains new IDE Fleet feels much more responsive. 
 
+I will get next days access to the new work classes and will test PhpStorm with it to see if its performances better. It has the opportunity for me to replace development locally, so I can finally swap between devices and continue my work. The device can be also a Raspberry Pi / Chromebook / iPad with Keyboard.  
 
-
+I hope you like this article, and you will give Gitpod a try. If you have any questions, feel free to ask them in the comments.
