@@ -1,0 +1,8 @@
+Stackblitz
+Vitejs
+vCPUs
+init
+Symfony
+PhpStorm
+neovim
+dotfiles
