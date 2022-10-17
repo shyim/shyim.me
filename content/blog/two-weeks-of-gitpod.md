@@ -18,7 +18,7 @@ We tried [Stackblitz](https://stackblitz.com/) first, which it was really workin
 
 ## Gitpod
 
-So I remembered that we talked at the [Barcamp](https://www.kellerkinder.de/barcamp) (must visit event if you are interested into Shopware) about Gitpod. So we tried it and it was really nice. We could start a development environment for a GitHub repository with a single click. It was really fast, and we could start coding directly. We also had a preview environment for each branch and pull request. So we could test our changes directly in the browser by starting a Gitpod for that branch.
+So I remembered that we talked at the [Barcamp](https://www.kellerkinder.de/barcamp) (you have to visit event if you are interested into Shopware) about Gitpod. So we gave it a try and were really impressed. We can start a development environment for a GitHub repository with just a single click. It was really fast, and we were able to start coding instantly. We also had a preview environment for each branch and pull request. So we tested our changes directly in the browser by starting a Gitpod for the specific branch.
 
 The project itself is a Vitejs project with Vue 3 and TypeScript. So not really a big project. A default Gitpod has 6 vCPUs and 12 GB of RAM. So it was more than enough for this simple project.
 
