@@ -14,7 +14,7 @@ Everything was fine until I broke somehow IPv6 networking with Docker containers
 
 ## Stackblitz
 
-We tried [Stackblitz](https://stackblitz.com/) first, but it was really working fine for us. Until we wanted to collaborate and work together with Git branches on GitHub. Stackblitz is not made really for that, so we had to find an alternative.
+We tried [Stackblitz](https://stackblitz.com/) first, which it was really working fine for us until we wanted to collaborate and work together with Git branches on GitHub. Stackblitz is not made really for that, so we had to find an alternative.
 
 ## Gitpod
 
