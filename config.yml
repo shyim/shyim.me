@@ -73,6 +73,10 @@ params:
           url: "https://twitter.com/shyim97"
         - name: github
           url: "https://github.com/shyim"
+        - name: mastodon
+          url: "https://phpc.social/@shyim"
+        - name: paypal
+          url: "https://paypal.me/shyim"
 
     cover:
         hidden: true # hide everywhere but not in structured data
