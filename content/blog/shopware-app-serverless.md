@@ -1,6 +1,6 @@
 ---
 id: shopware-app-serverless
-date: 2022-11-13T20:00:00
+date: 2022-11-27T20:00:00
 title: Easy and Cheap Shopware App Hosting using Cloudflare Workers
 author: Shyim
 author_title: Developer @ Shopware
@@ -186,7 +186,7 @@ In the template is also an [example to render a module page](https://github.com/
 
 There are two plans Bundled and Unbound.
 
-In Bundled you can execute 10(free plan) up to 30ms CPU time. This does not contain any IO (HTTP calls). In Unbound you can use up to 30s including IO.
+In Bundled you can execute up to 50ms CPU time (free plan 10ms). This does not contain any IO (HTTP calls). In Unbound you can use up to 30s including IO.
 
 You can find the plans [here](https://developers.cloudflare.com/workers/platform/pricing)
 
