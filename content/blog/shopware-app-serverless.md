@@ -172,6 +172,8 @@ for (const update of updates) {
 
 In the template is also an [example to render a module page](https://github.com/shyim/shopware-app-example-cloudflare/tree/main/src/routes/module).
 
+The [FroshWebDavApp](https://store.shopware.com/frosh11030048018f/webdav.html) is also opensource at [GitHub](https://github.com/FriendsOfShopware/FroshAppWebDav) and is using Cloudflare Workers in free plan.
+
 
 ## Available features at Cloudflare
 
