@@ -1,5 +1,5 @@
 ---
-id: how-to-build-assets-faster
+id: how-to-build-shopware-extension-assets-faster
 date: 2022-12-15T21:00:00
 title: How to build your Shopware extension assets much faster
 author: Shyim
