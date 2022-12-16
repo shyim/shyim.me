@@ -51,7 +51,7 @@ Additionally, the default Webpack config gives us stuff like:
 
 So when our extension is already isolated from the Administration itself, and we use anything from the `Shopware` global object, can we just use a different bundler?
 
-## Combing ESBuild with shopware-cli
+## Combining ESBuild with shopware-cli
 
 [ESBuild](https://esbuild.github.io/) is a fast bundler written in Go, and [shopware-cli](https://github.com/FriendsOfShopware/shopware-cli/) itself is also written in Go. So let's combine these tools to integrate them directly into shopware-cli instead of installing other stuff.
 
