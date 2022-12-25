@@ -1,6 +1,7 @@
+---
 id: devenv-compose-developer-environment-for-php-with-nix
 date: 2022-12-25T00:00:00
-title: Devenv: Compose a Developer Environment easily for PHP with Nix
+title: 'Devenv: Compose a Developer Environment easily for PHP with Nix'
 author: Shyim
 author_title: Principal Software Engineer @ Shopware
 author_url: https://github.com/shyim
