@@ -10,7 +10,7 @@ tags: [devenv, nix, docker, php]
 ---
 
 I have been using [Nix](https://nixos.org) for almost four years and also maintaining some packages at [nixpkgs](https://github.com/nixos/nixpkgs) (the primary Nix repository). The Nix learning curve is complicated, so I could not get my colleagues into it.
-But [Devenv](https://devenv.sh) made it so easy to compose a developer environment, so I got their attraction, and some of them switched already, and we are looking to where we can port it.
+But [Devenv](https://devenv.sh) made it so easy to compose a developer environment, so I got their attraction, and some of them switched already, and we are looking to where we can use it too.
 
 ## What is Devenv?
 
@@ -252,7 +252,7 @@ inputs:
         follows: nixpkgs
 ```
 
-The phps flake refers to nixpkgs, having the same nixpkgs input also, in phps we say to follow our root nixpkgs.
+The phps flake refers to nixpkgs, to have the same nixpkgs in phps we say to follow our root nixpkgs.
 
 Now we can run `devenv update` to update our lock file and add the new input.
 
@@ -288,7 +288,7 @@ You can create a `devenv.local.nix` to override configurations locally. This fil
 
 ## Devenvify an existing application
 
-I will use the [symfony demo application](https://github.com/symfony/demo) to see how a complete environment could look. The demo application requires the following:
+I will use the [symfony demo application](https://github.com/symfony/demo) to show how a complete environment could look. The demo application requires the following:
 
 - PHP 8.1
 - Node
@@ -351,8 +351,8 @@ Also, it makes sense to call `devenv gc` to get rid of downloaded packages which
 
 ## Conclusion
 
-We started using [Devenv at Shopware](https://github.com/shopware/platform/blob/trunk/devenv.nix) for 2 weeks, and fascinating developers are still to switch to it. It allows us to build one environment that works similarly on Linux, Mac, and WSL2 without any performance issues, as it runs natively without containers. The developers like it to have a declarative way to build their environments, especially trying stuff out without breaking their complete system. 
+We started using [Devenv at Shopware](https://github.com/shopware/platform/blob/trunk/devenv.nix) for 2 weeks, and some developers are moved already to it. It allows us to build one environment that works similarly on Linux, Mac, and WSL2 without any performance issues, as it runs natively without containers. The developers likes it to have a declarative way to build their environments, especially trying stuff out without breaking their complete system. 
 
 From the DevOps side, it's also lovely when you update the config/lock. It get's applied after the `git pull` of the developer, and they don't have to think about updating their tools or pulling images.
 
-The first commit of Devenv was two months before, so It's a new tool making Nix more accessible for all kinds of projects outside. If you have questions or problems, feel free to join the [Discord server](https://discord.gg/naMgvexb6q).
+The first commit of Devenv was two months before, so It's a new tool making Nix more accessible for all kinds of projects outside. If you have questions or problems, feel free to join the [Devenv Discord server](https://discord.gg/naMgvexb6q).
