@@ -146,6 +146,11 @@ Typically you want to create MySQL users and databases, so it's easier for the d
 +      ensurePermissions = { "app.*" = "ALL PRIVILEGES"; };
 +    }
 +  ];
++
++  # Project specific MySQL config like require always a primary key
++  services.mysql.settings.mysqld = {
++    "sql_require_primary_key" = "on";
++  };
 }
 ```
 
