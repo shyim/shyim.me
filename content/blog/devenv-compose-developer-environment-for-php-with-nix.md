@@ -272,10 +272,14 @@ You can find all binaries from your shell symlinked in the `.devenv/profile/bin`
 
 For VSCode users, there is also a [extension](https://marketplace.visualstudio.com/items?itemName=mkhl.direnv) for it
 
+## Cloud Developer Enviroments (CDE)
+
+For [GitHub Codespaces is a option available](https://devenv.sh/integrations/codespaces-devcontainer/) directly inside Devenv and for [Gitpod is a pull request open](https://github.com/gitpod-io/workspace-images/pull/999) to install it into the base image. 
+So you can use the same configuration there too.
+
 ## Make local changes only for you
 
 You can create a `devenv.local.nix` to override configurations locally. This file should be ignored in your `.gitignore` (`devenv init` does this by default).
-
 
 ## Devenvify an existing application
 
