@@ -42,7 +42,7 @@ A bundle can be also a theme in Shopware. You just need to implement the `ThemeI
 
 ## How does the Bundle integrate itself?
 
-The bundle can be integrated like usual in Symfony, in the `config/packages.php` [file](https://github.com/shopware/production/blob/6.4/config/bundles.php#L19).
+The bundle can be integrated like usual in Symfony, in the `config/bundles.php` [file](https://github.com/shopware/production/blob/6.4/config/bundles.php#L19).
 You could integrate your Bundle code into the `src` folder of the Shopware 6 production template and register a new namespace in the project `composer.json`
 
 # One Bundle per project or multiple ones?
