@@ -16,11 +16,12 @@ From Xeiaso:
 
 | Title                                 | Start Date | Salary      |
 | ------------------------------------- | ---------- | ----------- |
-| Shopware: Principal Software Engineer | 01/09/22   | 51600€/year |
-| Shopware: Principal Software Engineer | 01/04/22   | 50400€/year |
-| Shopware: Technical Specialist        | 01/11/20   | 48000€/year |
-| Shopware: Developer Core              | 01/09/19   | 43200€/year |
-| Shopware: Developer Core              | 01/11/18   | 40800€/year |
-| Shopware: Developer Core              | 01/05/18   | 38400€/year |
-| Agency: Developer                     | 01/05/17   | 36000€/year |
+| Shopware: Principal Software Engineer | 01/07/23   | 56.400€/year (+2.400€/year inflation bonus) |
+| Shopware: Principal Software Engineer | 01/09/22   | 51.600€/year (+2.400€/year inflation bonus) |
+| Shopware: Principal Software Engineer | 01/04/22   | 50.400€/year |
+| Shopware: Technical Specialist        | 01/11/20   | 48.000€/year |
+| Shopware: Developer Core              | 01/09/19   | 43.200€/year |
+| Shopware: Developer Core              | 01/11/18   | 40.800€/year |
+| Shopware: Developer Core              | 01/05/18   | 38.400€/year |
+| Agency: Developer                     | 01/05/17   | 36.000€/year |
 
