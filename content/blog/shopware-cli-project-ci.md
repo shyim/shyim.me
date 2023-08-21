@@ -77,6 +77,7 @@ I think this is just the beginning, and we can do a lot more in the future. The 
 The command is configurable with a YAML file. The config looks like this:
 
 ```yaml
+# .shopware-project.yml
 build:
   # deletes all public source folders of all extensions, can be only used when /bundles is served from local and not external CDN
   remove_extension_assets: false
