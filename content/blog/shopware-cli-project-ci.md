@@ -55,11 +55,13 @@ So the Command will build Shopware and run a lot of optimizations:
 - Run composer install with optimized class loader and [classmap-authoritative](https://getcomposer.org/doc/articles/autoloader-optimization.md#what-does-it-do--2) (Composer cannot find dynamic generated classes anymore, safes performance)
 - Builds Administration and Storefront when required
     - Checks which extensions require what build
+    - Runs npm install for all extensions
     - Commands like `bin/console bundle:dump` etc. are rewritten in Go and requires so less PHP execution (better as we don't have our Database in our CI).
 - Deleting many unnecessary files to save space 
     - Whole Administration source code after build
     - Many fonts from TCPDF (Shopware uses DomPDF, TCPDF is only used to merge PDF files)
     - All administration source code from all installed extensions ([Requires at least Shopware 6.5.1.0](https://github.com/shopware/platform/commit/d5798c87037e25624c25f895cfbce5e8cef4be9a))
+    - Deletes node_modules folders
 - Optimize snippets in Administration
     - Developers save their Administration snippets always to the same folder to their modules. With that style we get in the Administration a lot of snippet files. To clean this up and optimize the performance, we merge all snippets into one file.
 
@@ -87,6 +89,8 @@ build:
   cleanup_paths:
     - path
 ```
+
+Checkout the [Shopware project yaml configuration reference page](https://sw-cli.fos.gg/shopware-project-yml-schema/) for all possible configurations.
 
 ## Conclusion
 

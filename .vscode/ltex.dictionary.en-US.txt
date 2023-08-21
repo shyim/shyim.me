@@ -11,3 +11,4 @@ Deployer
 DomPDF
 FriendsOfShopware
 friendsofshopware
+npm
