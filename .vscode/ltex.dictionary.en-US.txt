@@ -6,3 +6,9 @@ Symfony
 PhpStorm
 neovim
 dotfiles
+shopware-cli
+Deployer
+DomPDF
+FriendsOfShopware
+friendsofshopware
+npm
