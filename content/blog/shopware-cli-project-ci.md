@@ -1,6 +1,6 @@
 ---
 id: shopware-cli-project-ci
-date: 2023-08-22T09:00:00
+date: 2023-08-22T08:00:00
 title: Building your Shopware project in the CI using shopware-cli
 author: Shyim
 author_title: Principal Software Engineer @ Shopware
