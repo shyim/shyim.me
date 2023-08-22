@@ -68,6 +68,7 @@ So the Command will build Shopware and run a lot of optimizations:
 Size difference:
 
 **Normal Shopware:** 276 MB
+
 **Shopware with shopware-cli:** 181 MB
 
 The size matters for the deployment time and the disk space on the server. When Docker is used, the image size will be also much smaller.
