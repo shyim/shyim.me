@@ -10,17 +10,17 @@ tags: [shopware, app-system, app, hosting, cloudflare]
 ---
 
 Shopware Apps are a different way to extend Shopware and can use an optional external App Server to provide additional functionality from your external backend. 
-In this Blog post I want to show you that a Shopware App with a Backend can be easy and also very cheap. 
+In this Blog post, I want to show you that a Shopware App with a Backend can be easy and also very affordable. 
 
 ## The scary backend server
 
-Before the App system the only way to extend Shopware was to build a plugin. Plugins are like Symfony Bundles with Shopware magic to offer them in Shopware Store.
-So we wrote code that runs directly at the customers web shop, and we can create additional tables to store our information. But we have to make sure that our code works on many setups and PHP versions.
+Before the App system, the only way to extend Shopware was to build a plugin. Plugins are like Symfony Bundles with Shopware magic to offer them in Shopware Store.
+So we wrote code that runs directly in the customer's web shop, and we can create additional tables to store our information. But we have to make sure that our code works on many setups and PHP versions.
 As the plugins can do like anything and this makes sandboxing difficult or build reliable that they don't break each other. That was when the Shopware app system was born to offer a different extension concept.
 
 App system uses app scripting a Twig sandbox to run code or trigger a webhook to your system, and you get API access and call the API again to modify stuff.
 
-Now we write the code on our own backend and the shops calls our API routes to execute the code. Huh! I need a server that will serve this traffic and this adds also some responsibilities
+Now we write the code on our own backend and the shops call our API routes to execute the code. Huh! I need a server that will serve this traffic and this adds also some responsibilities
 
 - The user expects the Server is fast on the API calls
 - The user expects that the service have a good uptime
@@ -44,11 +44,11 @@ This allows us to use any of your favorite serverless platforms, deploy our code
 My most loved serverless platform is Cloudflare Workers it has a great DX and a [great Discord Community](https://discord.com/invite/cloudflaredev) which is really helpful!. 
 So I will cover here an app hosting example at Cloudflare Workers and I will come at the end of the blog posts to the pricing.
 
-I built a [Cloudflare Worker Shopware App Template](https://github.com/shyim/shopware-app-cloudflare-template) and will show you how easy and cheap a backend hosting can be.
+I built a [Cloudflare Worker Shopware App Example](https://github.com/shyim/shopware-app-example-cloudflare) and will show you how easy and affordable a backend hosting can be.
 
 The template uses TypeScript to serve an API at any Cloudflare Edge Node. Let's look more deep in the template what it does:
 
-First we have a [package.json](https://github.com/shyim/shopware-app-example-cloudflare/blob/main/package.json) which requires [shopware-app-server-sdk](https://github.com/shyim/app-server-sdk-typescript) and itty-router. 
+First, we have a [package.json](https://github.com/shyim/shopware-app-example-cloudflare/blob/main/package.json) which requires [shopware-app-server-sdk](https://github.com/FriendsOfShopware/app-server-sdk-js) and itty-router. 
 The app server sdk contains the all complex stuff for Shopware like registration process, verify requests, preconfigured API client, so you can work directly on your implementation.
 
 And then we have our [wrangler.toml](https://github.com/shyim/shopware-app-example-cloudflare/blob/main/wrangler.toml), this is the configuration file for Cloudflare Workers a specifies an entry script `src/index.ts`. 
@@ -104,7 +104,7 @@ export async function authorizeCallback(request: Request, env: Env): Promise<Res
 
 In the function `getConfiguredApp` we configure the app server SDK for our URL, choose the storage for the credentials by the `Env` which contains all variables set in `wrangler.toml` or in our secrets.
 
-And then we have already a complete app registration flow at Cloudflare.
+And then we already have a complete app registration flow at Cloudflare.
 
 If we register now a Shop using the example [manifest.xml](https://github.com/shyim/shopware-app-example-cloudflare/blob/main/MyApp/manifest.xml) we can see in Cloudflare KV our registration.
 
@@ -194,11 +194,11 @@ You can find the plans [here](https://developers.cloudflare.com/workers/platform
 
 ## Pricing
 
-In free tier you have access to 100k requests a day on your Worker. With a Paid plan (min 5$) you get 10 Million requests a month and each additional million costs you $0.50. Of course other services costs also like the Key Value storage. See [pricing page](https://developers.cloudflare.com/workers/platform/pricing) for all products.
+In the free tier, you have access to 100k requests a day on your Worker. With a Paid plan (min 5$) you get 10 Million requests a month and each additional million costs you $0.50. Of course, other services costs also like the Key Value storage. See [pricing page](https://developers.cloudflare.com/workers/platform/pricing) for all products.
 
 ## Conclusion
 
-A backend of an app server must not be always hosted traditionally using a Web hosting / Server. Due to the simplicity of the request we can use serverless platforms to create really easy and cheap our app server backend.
+A backend of an app server must not be always hosted traditionally using a Web hosting / Server. Due to the simplicity of the request, we can use serverless platforms to create really easy and cheap our app server backend.
 
 I used here in my example Cloudflare because I am the most familiar with it, but there are many similar options with other programming languages like:
 
