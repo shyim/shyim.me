@@ -68,7 +68,7 @@ With the usage of an cloud-bucket like s3 we can even move the original files fr
 ## Some image processing providers list
 
 - [BunnyCDN](https://bunny.net/)
-    - not cheap with 9,5$/m per zone for image processing, but fast and including webp. We need to enable `Bunny Optimizer` and `Manipulation Engine`. Additionally, we can use really cheap storage and global traffic.
+    - Cheap with 9,5$/m per zone for image processing, but fast and including webp. We need to enable `Bunny Optimizer` and `Manipulation Engine`. Additionally, we can use really cheap storage and global traffic.
 - [imgproxy](https://imgproxy.net)
     - Opensource, can be selfhosted, fast and including webp and avif. But needs a caching in front of it, f.e. a CDN.
 - [Images.weserv.nl](https://images.weserv.nl)
@@ -80,4 +80,4 @@ With the usage of an cloud-bucket like s3 we can even move the original files fr
 
 ## Conclusion
 
-Thumbnails are essential in modern web development. But do we really want wasting time for setting up PHP with libavif, installing optimizers on the host to optimize later after upload the images and still getting unsuitable images for our users and pagespeed? I am sure there are better tasks to do as these. The external services are even very cheap like with Bunnycdn for 9,5$. Give it a try and keep focusing on the things that really needs your power.
+Thumbnails are essential in modern web development. But do we really want wasting time for setting up PHP with libavif, installing optimizers on the host to optimize later after upload the images and still getting unsuitable images for our users and pagespeed? I am sure there are better tasks to do as these. The external services are even very cheap like with Bunnycdn for 9,5$/m. Give it a try and keep focusing on the things that really needs your power.
