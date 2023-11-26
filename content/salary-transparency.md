@@ -16,6 +16,7 @@ From Xeiaso:
 
 | Title                                 | Start Date | Salary      |
 | ------------------------------------- | ---------- | ----------- |
+| Shopware: Principal Software Engineer | 01/12/23   | 72.000€/year (+2.400€/year inflation bonus) |
 | Shopware: Principal Software Engineer | 01/07/23   | 56.400€/year (+2.400€/year inflation bonus) |
 | Shopware: Principal Software Engineer | 01/09/22   | 51.600€/year (+2.400€/year inflation bonus) |
 | Shopware: Principal Software Engineer | 01/04/22   | 50.400€/year |
