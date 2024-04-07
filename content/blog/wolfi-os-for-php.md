@@ -226,14 +226,22 @@ FROM ghcr.io/shyim/wolfi-php/frankenphp:8.3
 RUN apk add --no-cache php-frankenphp-8.3-curl
 ```
 
+## Base images
+
+I built some Base images with Wolfi for rapid start:
+
+- [FrankenPHP](https://github.com/shyim/wolfi-php/tree/main/images/frankenphp)
+- [FPM standalone](https://github.com/shyim/wolfi-php/tree/main/images/fpm)
+- [Nginx](https://github.com/shyim/wolfi-php/tree/main/images/nginx)
+- [Caddy](https://github.com/shyim/wolfi-php/tree/main/images/caddy)
+
 ## Other examples
 
-I built some example docker files in the repository for:
+I took the [Symfony Demo](https://github.com/symfony/demo) application and created examples with FrankenPHP, FPM standalone, Nginx and Caddy.
 
-- [Nginx + FPM](https://github.com/shyim/wolfi-php/tree/main/examples/nginx-php-fpm)
-- [FPM](https://github.com/shyim/wolfi-php/tree/main/examples/fpm)
-- [Symfony Demo + FrankenPHP](https://github.com/shyim/wolfi-php/tree/main/examples/frankenphp-symfony-demo)
-- [PHP-CS-Fixer with apko](https://github.com/shyim/php-cs-fixer-docker)
+[You can find them here](https://github.com/shyim/wolfi-php/tree/main/examples)
+
+I have also one example of using Wolfi without a Package manager to [create a small PHP-CS-Fixer docker image](https://github.com/shyim/php-cs-fixer-docker).
 
 ## Conclusion
 
