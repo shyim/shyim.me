@@ -8,6 +8,11 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: []
 ---
 
+Sponsoring possible with:
+
+- [Github Sponsor](https://github.com/sponsors/shyim)
+- [PayPal](https://paypal.me/shyim)
+
 This awesome people are supporting me:
 
 # Github Sponsors
@@ -37,6 +42,3 @@ This awesome people are supporting me:
 - David Neustadt (5€)
 - Christian Voss (50€)
 - Stefano Rutishauser (15€)
-
-
-Moneypool-Link: https://www.paypal.com/pools/c/7ZiGCZH8iU
