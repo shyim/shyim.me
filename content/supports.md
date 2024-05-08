@@ -29,7 +29,7 @@ This awesome people are supporting me:
 - Alea123 (6,66€)
 - Rafael Prukop (25€)
 - Nils Vosgröne (0,68€)
-- Lars Borchert (6,66€)
+- Lars Schröder (6,66€)
 - Lars Lohmann (5€)
 - Sebastian König (5€)
 - Alexander W.H. Wachert (5€)
