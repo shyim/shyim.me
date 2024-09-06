@@ -176,7 +176,7 @@ and the resulting image is **61.4MB**, so ~5MB less as no package manager at all
 
 ## Using proprietary packages or FrankenPHP
 
-[For additional packages, I set up an own repository](https://github.com/shyim/wolfi-php) server which contains proprietary extensions like Blackfire/Relay/Tideways and other extensions. [I am working actively on contributing the extensions back to Wolfi itself](https://github.com/wolfi-dev/os/pulls?q=+is%3Apr+author%3Ashyim+), but until then they can be installed from my repository.
+[i set up my own repository](https://github.com/shyim/wolfi-php) server which contains proprietary extensions like Blackfire/Relay/Tideways and other extensions. [I am working actively on contributing the extensions back to Wolfi itself](https://github.com/wolfi-dev/os/pulls?q=+is%3Apr+author%3Ashyim+), but until then they can be installed from my repository.
 
 [To use the repository with apk or apko, check out the README of the repository](https://github.com/shyim/wolfi-php?tab=readme-ov-file#installation-of-repository)
 
