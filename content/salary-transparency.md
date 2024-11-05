@@ -14,8 +14,9 @@ From Xeiaso:
 
 > Please consider publishing your salary data like this as well. By open, voluntary transparency we can help to end stigmas around discussing pay and help ensure that the next generations of people in tech are treated fairly. Stigmas thrive in darkness but die in the light of day. You can help end the stigma by playing your cards out in the open like this.
 
-| Title                                 | Start Date | Salary      |
-| ------------------------------------- | ---------- | ----------- |
+| Title                                 | Start Date | Salary        |
+| ------------------------------------- | ---------- | ------------- |
+| Shopware: Principal Software Engineer | 01/09/24   | 120.000€/year |
 | Shopware: Principal Software Engineer | 01/03/24   | 72.000€/year |
 | Shopware: Principal Software Engineer | 01/12/23   | 72.000€/year (+2.200€/year inflation bonus) |
 | Shopware: Principal Software Engineer | 01/07/23   | 56.400€/year (+2.200€/year inflation bonus) |
