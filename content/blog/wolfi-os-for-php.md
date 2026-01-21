@@ -9,6 +9,12 @@ author_image_url: https://avatars3.githubusercontent.com/u/6224096?s=460&u=18be3
 tags: [php, docker, alpine, wolfi-os, chainguard]
 ---
 
+> **⚠️ DEPRECATED: DO NOT USE THIS APPROACH ANYMORE**
+>
+> This blog post contains outdated information. Chainguard has significantly reduced its commitment to open source, and the wolfiphp approach described here is no longer recommended for production use. See the [wolfiphp announcement](https://github.com/orgs/wolfi-dev/discussions/77550) for more details.
+>
+> **Alternative:** Use Debian's official packages with `apt-get install php8.4-cli` and related packages. While images may be larger, Debian provides stable, openly maintained PHP packages without dependency on corporate-controlled initiatives.
+
 Currently, the de-facto standard to Dockerizing PHP applications is to use the [Docker PHP official image](https://hub.docker.com/_/php/). This is maintained by Docker itself and community members and has compiled PHP with no extensions. To install extensions, we have to do this in our Dockerfile:
 
 ```dockerfile

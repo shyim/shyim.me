@@ -69,6 +69,10 @@ params:
         Content: |
           Hey, My name is Soner Sayakci. I work at shopware AG as Developer in the core so my blog contains mostly Shopware related stuff. In my free time I contribute to a lot of projects like Opensearch, FriendsOfShopware. You can find my Salary Transparency [here](/salary-transparency/).
 
+    social:
+        twitter: shyim97
+        facebook_admin: ""
+
     socialIcons:
         - name: twitter
           url: "https://twitter.com/shyim97"
